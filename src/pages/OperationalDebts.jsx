@@ -8,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function OperationalDebts() {
   const { data: debts, isLoading } = useQuery({
     queryKey: ["operational_debts"],
-    queryFn: () => base44.entities.operational_debts.list("-created_date", 100),
+    queryFn: () => base44.entities.OperationalDebts.list("-created_date", 100),
     initialData: [],
   });
 

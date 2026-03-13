@@ -9,7 +9,7 @@ import { format } from "date-fns";
 export default function InjectionEvents() {
   const { data: events, isLoading } = useQuery({
     queryKey: ["injection_events"],
-    queryFn: () => base44.entities.injection_events.list("-created_date", 100),
+    queryFn: () => base44.entities.InjectionEvents.list("-created_date", 100),
     initialData: [],
   });
 
