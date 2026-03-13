@@ -1,7 +1,8 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Database, Zap } from "lucide-react";
+import { Database, Zap, LayoutDashboard } from "lucide-react";
 
 const navItems = [
+  { path: "/Dashboard", label: "Dashboard", icon: LayoutDashboard },
   { path: "/OperationalDebts", label: "Operational Debts", icon: Database },
   { path: "/InjectionEvents", label: "Injection Events", icon: Zap },
 ];

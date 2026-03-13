@@ -6,6 +6,7 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Layout from './components/Layout';
+import Dashboard from './pages/Dashboard';
 import OperationalDebts from './pages/OperationalDebts';
 import InjectionEvents from './pages/InjectionEvents';
 
@@ -31,8 +32,9 @@ const AuthenticatedApp = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/OperationalDebts" replace />} />
+      <Route path="/" element={<Navigate to="/Dashboard" replace />} />
       <Route element={<Layout />}>
+        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/OperationalDebts" element={<OperationalDebts />} />
         <Route path="/InjectionEvents" element={<InjectionEvents />} />
       </Route>
