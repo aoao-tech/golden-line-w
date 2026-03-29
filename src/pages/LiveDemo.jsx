@@ -10,7 +10,7 @@ const DEMO_SCENARIO = {
   complaint: "Hi, I just received my order and it's a total mess. The soup container was completely open and spilled all over the bag — everything is soaking wet. The fries are soggy and the burger bun is falling apart. I can't even eat this. This is unacceptable, I want a full refund.",
   analysis: {
     action_code: "SPILL",
-    golden_line_hebrew: "לאטום מכסה של המרק לפני סגירת השקית",
+    golden_line_hebrew: "לאטום את המכסה של המרחק לפני סגירת השקית",
     reasoning_logic: "Soup container was not properly sealed before delivery, causing liquid to spill and damage other food items.",
     evidence_quote: "The soup container was completely open and spilled all over the bag — everything is soaking wet.",
     confidence_score: 0.97,
@@ -68,6 +68,7 @@ export default function LiveDemo() {
 
     await new Promise(r => setTimeout(r, 2200));
     setStep("result");
+    setTimeout(() => handleInject(), 800);
   };
 
   const handleInject = async () => {
@@ -209,11 +210,9 @@ export default function LiveDemo() {
             done={step === "injected"}
           >
             {step === "result" && (
-              <div className="flex items-center justify-between">
-                <p className="text-sm text-slate-600">Ready to inject the golden line instruction to the kitchen system.</p>
-                <Button className="bg-amber-500 hover:bg-amber-600 text-white ml-4 shrink-0" onClick={handleInject}>
-                  <Zap className="w-4 h-4 mr-2" /> Inject to Kitchen
-                </Button>
+              <div className="flex items-center gap-3 text-sm text-slate-600">
+                <div className="w-5 h-5 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
+                Sending instruction to kitchen system...
               </div>
             )}
             {step === "injecting" && (
