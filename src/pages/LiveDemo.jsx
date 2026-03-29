@@ -10,7 +10,7 @@ const DEMO_SCENARIO = {
   complaint: "Hi, I just received my order and it's a total mess. The soup container was completely open and spilled all over the bag — everything is soaking wet. The fries are soggy and the burger bun is falling apart. I can't even eat this. This is unacceptable, I want a full refund.",
   analysis: {
     action_code: "SPILL",
-    golden_line_hebrew: "לאטום את המכסה של המרחק לפני סגירת השקית",
+    golden_line_hebrew: "לאטום את המכסה של המרחק עם מכסה כפול",
     reasoning_logic: "Soup container was not properly sealed before delivery, causing liquid to spill and damage other food items.",
     evidence_quote: "The soup container was completely open and spilled all over the bag — everything is soaking wet.",
     confidence_score: 0.97,
