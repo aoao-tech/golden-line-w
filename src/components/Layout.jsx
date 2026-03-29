@@ -1,10 +1,11 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Database, Zap, LayoutDashboard } from "lucide-react";
+import { Database, Zap, LayoutDashboard, Play } from "lucide-react";
 
 const navItems = [
   { path: "/Dashboard", label: "Dashboard", icon: LayoutDashboard },
   { path: "/OperationalDebts", label: "Operational Debts", icon: Database },
   { path: "/InjectionEvents", label: "Injection Events", icon: Zap },
+  { path: "/LiveDemo", label: "Live Demo", icon: Play },
 ];
 
 export default function Layout() {

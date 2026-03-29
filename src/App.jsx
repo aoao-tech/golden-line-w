@@ -9,6 +9,7 @@ import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import OperationalDebts from './pages/OperationalDebts';
 import InjectionEvents from './pages/InjectionEvents';
+import LiveDemo from './pages/LiveDemo';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -37,6 +38,7 @@ const AuthenticatedApp = () => {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/OperationalDebts" element={<OperationalDebts />} />
         <Route path="/InjectionEvents" element={<InjectionEvents />} />
+        <Route path="/LiveDemo" element={<LiveDemo />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
