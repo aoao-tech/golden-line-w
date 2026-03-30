@@ -282,10 +282,12 @@ export default function LiveDemo() {
               active={step === "p2_order"}
               done={["p2_triggering", "p2_injected"].includes(step)}
             >
-              <div className="flex items-center gap-2 mb-3 text-xs text-slate-500">
+              <div className="flex items-center gap-2 mb-3 flex-wrap text-xs text-slate-500">
                 <span className="font-mono bg-slate-100 px-2 py-1 rounded">Order: {DEMO_SCENARIO.new_order.order_id}</span>
+                <span className="font-mono bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1 rounded font-semibold">Customer: {DEMO_SCENARIO.customer_id}</span>
                 <span className="font-mono bg-slate-100 px-2 py-1 rounded">Restaurant: {DEMO_SCENARIO.restaurant_id}</span>
               </div>
+              <div className="text-xs text-slate-500 mb-2 italic">Same customer, same restaurant — reordering the same items that caused the complaint:</div>
               <div className="space-y-1.5">
                 {DEMO_SCENARIO.new_order.items.map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-slate-700 bg-slate-50 border border-slate-200 px-3 py-2 rounded">
@@ -297,35 +299,18 @@ export default function LiveDemo() {
               {step === "p2_order" && (
                 <div className="flex items-center gap-2 mt-3 text-xs text-amber-600">
                   <div className="w-3 h-3 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
-                  Checking Golden Line database for active debts...
+                  Matching against Golden Line database...
+                </div>
+              )}
+              {["p2_triggering", "p2_injected"].includes(step) && (
+                <div className="flex items-center gap-2 mt-3 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-2 rounded">
+                  <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                  Active debt found for <strong>{DEMO_SCENARIO.customer_id}</strong> — injecting Golden Line to kitchen
                 </div>
               )}
             </DemoCard>
           )}
 
-          {/* Step 2b — Golden Line Triggered */}
-          {["p2_triggering", "p2_injected"].includes(step) && (
-            <DemoCard
-              icon={<Zap className="w-4 h-4" />}
-              label="Golden Line Triggered"
-              active={step === "p2_triggering"}
-              done={step === "p2_injected"}
-            >
-              {step === "p2_triggering" ? (
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm text-amber-700 bg-amber-50 border border-amber-200 px-3 py-2 rounded">
-                    <div className="w-4 h-4 border-2 border-amber-500 border-t-transparent rounded-full animate-spin shrink-0" />
-                    Active debt found for {DEMO_SCENARIO.customer_id} — injecting instruction...
-                  </div>
-                </div>
-              ) : (
-                <div className="flex items-center gap-2 p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <div className="text-sm font-medium text-emerald-800">Matched! Debt active — sending to kitchen</div>
-                </div>
-              )}
-            </DemoCard>
-          )}
 
           {/* Step 2c — Kitchen Receives Instruction */}
           {step === "p2_injected" && (
