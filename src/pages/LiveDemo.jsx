@@ -167,7 +167,7 @@ export default function LiveDemo() {
           {["p1_analyzing", "p1_stored", ...PHASE2_STEPS].includes(step) && (
             <DemoCard
               icon={<Brain className="w-4 h-4" />}
-              label="AI Agentic Analysis"
+              label="Agentic AI Analysis"
               active={step === "p1_analyzing"}
               done={["p1_stored", ...PHASE2_STEPS].includes(step)}
             >
@@ -305,7 +305,7 @@ export default function LiveDemo() {
               {["p2_triggering", "p2_injected"].includes(step) && (
                 <div className="flex items-center gap-2 mt-3 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-2 rounded">
                   <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                  Active debt found for <strong>{DEMO_SCENARIO.customer_id}</strong> — injecting Golden Line to kitchen
+                  Active debt found for <strong>{DEMO_SCENARIO.customer_id}</strong>, injecting Golden Line to kitchen
                 </div>
               )}
             </DemoCard>
@@ -351,7 +351,7 @@ export default function LiveDemo() {
           <div className="w-14 h-14 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center mb-4">
             <Play className="w-5 h-5 text-amber-500" />
           </div>
-          <p className="text-slate-500 text-sm max-w-md">Press <strong>Start Demo</strong> to simulate the full Golden Line flow — from a closed support ticket all the way to real-time kitchen protection on the next order.</p>
+          <p className="text-slate-500 text-sm max-w-md">Press <strong>Start Demo</strong> to simulate the full Golden Line flow, from a closed support ticket all the way to real-time kitchen protection on the next order.</p>
         </div>
       )}
     </div>
