@@ -91,53 +91,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── THE SOLUTION ── */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-3">The Solution</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-              One line of insight.<br />Zero repeat mistakes.
-            </h2>
-            <p className="text-slate-500 text-lg max-w-xl mx-auto leading-relaxed">
-              Golden Line distills every complaint into a single, actionable instruction — printed directly on the packer's next order slip.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-3 gap-6 mb-16">
-            {[
-              { step: "01", title: "Complaint comes in", desc: "A closed CS ticket is ingested automatically from Zendesk, Salesforce, or your CRM.", color: "bg-blue-50 border-blue-100 text-blue-700", dot: "bg-blue-500" },
-              { step: "02", title: "AI extracts the root cause", desc: "Our model identifies the exact packaging failure and generates a precise Hebrew kitchen instruction.", color: "bg-indigo-50 border-indigo-100 text-indigo-700", dot: "bg-indigo-500" },
-              { step: "03", title: "Delivered to the packer", desc: "On the next order from that customer and restaurant, the instruction appears on the kitchen screen — before preparation.", color: "bg-emerald-50 border-emerald-100 text-emerald-700", dot: "bg-emerald-500" },
-            ].map(({ step, title, desc, color, dot }) => (
-              <div key={step} className={`rounded-2xl border p-7 ${color}`}>
-                <div className={`w-2 h-2 rounded-full ${dot} mb-5`} />
-                <div className="text-3xl font-black opacity-20 mb-2">{step}</div>
-                <h3 className="font-bold text-slate-800 text-base mb-2">{title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="max-w-xl mx-auto bg-[#0B1629] rounded-2xl p-8 text-center shadow-xl">
-            <div className="text-xs text-slate-400 uppercase tracking-widest mb-4 font-medium">📋 What the packer sees</div>
-            <div className="text-2xl font-bold text-white leading-relaxed text-right mb-4" dir="rtl">
-              לאטום מכסה המרק עם טייפ לפני סגירת השקית
-            </div>
-            <div className="flex items-center justify-center gap-2 text-emerald-400 text-xs font-medium">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              Injected automatically · Zero manual effort
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── DEMO ── */}
-      <section id="demo" className="bg-[#0B1629] border-t border-slate-700 pt-16 pb-8 px-4">
+      <section id="demo" className="bg-white border-t border-slate-200 pt-16 pb-8 px-4">
         <div className="max-w-5xl mx-auto text-center mb-10">
-          <p className="text-xs font-semibold text-blue-400 uppercase tracking-widest mb-3">Interactive Demo</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">See it live — end to end</h2>
-          <p className="text-slate-400 mt-3 text-base">From complaint to kitchen instruction in under 10 seconds.</p>
+          <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-3">Interactive Demo</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">See it live — end to end</h2>
+          <p className="text-slate-500 mt-3 text-base">From complaint to kitchen instruction in under 10 seconds.</p>
         </div>
         <LiveDemo />
       </section>
