@@ -20,7 +20,7 @@ const DEMO_SCENARIO = {
   },
   new_order: {
     order_id: "ORD-99312",
-    items: ["Tomato Soup", "Crispy Fries", "Classic Burger"],
+    items: ["Classic Burger", "Tomato Soup", "Crispy Fries"],
   }
 };
 
