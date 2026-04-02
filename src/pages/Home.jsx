@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import LiveDemo from "./LiveDemo";
 import { ArrowRight, AlertCircle, RefreshCw, CheckCircle2, Zap } from "lucide-react";
 
 export default function Home() {
@@ -14,12 +14,12 @@ export default function Home() {
             </div>
             <span className="text-slate-900 font-semibold text-base tracking-tight">Golden Line</span>
           </div>
-          <Link
-            to="/LiveDemo"
+          <a
+            href="#demo"
             className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors border border-slate-200 rounded-lg px-4 py-2 hover:border-slate-300"
           >
-            Login
-          </Link>
+            Live Demo
+          </a>
         </div>
       </header>
 
@@ -36,12 +36,12 @@ export default function Home() {
           <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
             Our AI processes customer complaints into actionable packing instructions, delivered directly to your staff's screen during the next order.
           </p>
-          <Link
-            to="/LiveDemo"
+          <a
+            href="#demo"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:shadow-blue-700/40 hover:-translate-y-0.5"
           >
             See it in action <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -54,7 +54,6 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {/* Step 1 */}
             <div className="bg-white rounded-2xl border border-red-100 p-7 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-1 h-full bg-red-400 rounded-l-2xl" />
               <div className="flex items-center gap-2 mb-4">
@@ -72,7 +71,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Step 2 */}
             <div className="bg-white rounded-2xl border border-orange-100 p-7 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-1 h-full bg-orange-400 rounded-l-2xl" />
               <div className="flex items-center gap-2 mb-4">
@@ -108,27 +106,9 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-3 gap-6 mb-16">
             {[
-              {
-                step: "01",
-                title: "Complaint comes in",
-                desc: "A closed CS ticket is ingested automatically from Zendesk, Salesforce, or your CRM.",
-                color: "bg-blue-50 border-blue-100 text-blue-700",
-                dot: "bg-blue-500",
-              },
-              {
-                step: "02",
-                title: "AI extracts the root cause",
-                desc: "Our model identifies the exact packaging failure and generates a precise Hebrew kitchen instruction.",
-                color: "bg-indigo-50 border-indigo-100 text-indigo-700",
-                dot: "bg-indigo-500",
-              },
-              {
-                step: "03",
-                title: "Delivered to the packer",
-                desc: "On the next order from that customer and restaurant, the instruction appears on the kitchen screen — before preparation.",
-                color: "bg-emerald-50 border-emerald-100 text-emerald-700",
-                dot: "bg-emerald-500",
-              },
+              { step: "01", title: "Complaint comes in", desc: "A closed CS ticket is ingested automatically from Zendesk, Salesforce, or your CRM.", color: "bg-blue-50 border-blue-100 text-blue-700", dot: "bg-blue-500" },
+              { step: "02", title: "AI extracts the root cause", desc: "Our model identifies the exact packaging failure and generates a precise Hebrew kitchen instruction.", color: "bg-indigo-50 border-indigo-100 text-indigo-700", dot: "bg-indigo-500" },
+              { step: "03", title: "Delivered to the packer", desc: "On the next order from that customer and restaurant, the instruction appears on the kitchen screen — before preparation.", color: "bg-emerald-50 border-emerald-100 text-emerald-700", dot: "bg-emerald-500" },
             ].map(({ step, title, desc, color, dot }) => (
               <div key={step} className={`rounded-2xl border p-7 ${color}`}>
                 <div className={`w-2 h-2 rounded-full ${dot} mb-5`} />
@@ -139,7 +119,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Sample output */}
           <div className="max-w-xl mx-auto bg-[#0B1629] rounded-2xl p-8 text-center shadow-xl">
             <div className="text-xs text-slate-400 uppercase tracking-widest mb-4 font-medium">📋 What the packer sees</div>
             <div className="text-2xl font-bold text-white leading-relaxed text-right mb-4" dir="rtl">
@@ -153,18 +132,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ── */}
-      <section className="py-24 px-6 bg-[#0B1629]">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 tracking-tight">Ready to close the loop?</h2>
-          <p className="text-slate-400 text-lg mb-10">See the full flow live — from complaint to kitchen instruction in under 10 seconds.</p>
-          <Link
-            to="/LiveDemo"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:shadow-blue-700/40 hover:-translate-y-0.5"
-          >
-            See it in action <ArrowRight className="w-4 h-4" />
-          </Link>
+      {/* ── DEMO ── */}
+      <section id="demo" className="bg-[#0B1629] border-t border-slate-700 pt-16 pb-8 px-4">
+        <div className="max-w-5xl mx-auto text-center mb-10">
+          <p className="text-xs font-semibold text-blue-400 uppercase tracking-widest mb-3">Interactive Demo</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">See it live — end to end</h2>
+          <p className="text-slate-400 mt-3 text-base">From complaint to kitchen instruction in under 10 seconds.</p>
         </div>
+        <LiveDemo />
       </section>
 
       {/* ── FOOTER ── */}
