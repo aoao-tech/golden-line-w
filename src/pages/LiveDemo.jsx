@@ -167,7 +167,7 @@ export default function LiveDemo() {
           {["p1_analyzing", "p1_stored", ...PHASE2_STEPS].includes(step) && (
             <DemoCard
               icon={<Brain className="w-4 h-4" />}
-              label="AI Analysis"
+              label="AI Agentic Analysis"
               active={step === "p1_analyzing"}
               done={["p1_stored", ...PHASE2_STEPS].includes(step)}
             >
@@ -287,7 +287,7 @@ export default function LiveDemo() {
                 <span className="font-mono bg-amber-100 text-amber-800 border border-amber-300 px-2 py-1 rounded font-semibold">👤 Customer: {DEMO_SCENARIO.customer_id}</span>
                 <span className="font-mono bg-amber-100 text-amber-800 border border-amber-300 px-2 py-1 rounded font-semibold">🍽️ Restaurant: {DEMO_SCENARIO.restaurant_id}</span>
               </div>
-              <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 px-3 py-2 rounded mb-3 font-medium">✨ Same customer · Same restaurant · Same dishes — identical to the order that caused the complaint</div>
+              <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 px-3 py-2 rounded mb-3 font-medium">✨ Same customer · Same restaurant · Same dishes, identical to the order that caused the complaint</div>
               <div className="space-y-1.5">
                 {DEMO_SCENARIO.new_order.items.map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-slate-700 bg-slate-50 border border-slate-200 px-3 py-2 rounded">
