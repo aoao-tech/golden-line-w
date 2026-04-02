@@ -282,12 +282,12 @@ export default function LiveDemo() {
               active={step === "p2_order"}
               done={["p2_triggering", "p2_injected"].includes(step)}
             >
-              <div className="flex items-center gap-2 mb-3 flex-wrap text-xs text-slate-500">
-                <span className="font-mono bg-slate-100 px-2 py-1 rounded">Order: {DEMO_SCENARIO.new_order.order_id}</span>
-                <span className="font-mono bg-slate-100 px-2 py-1 rounded">Customer: {DEMO_SCENARIO.customer_id}</span>
-                <span className="font-mono bg-slate-100 px-2 py-1 rounded">Restaurant: {DEMO_SCENARIO.restaurant_id}</span>
+              <div className="flex items-center gap-2 mb-3 flex-wrap text-xs">
+                <span className="font-mono bg-slate-100 text-slate-600 px-2 py-1 rounded">Order: {DEMO_SCENARIO.new_order.order_id}</span>
+                <span className="font-mono bg-amber-100 text-amber-800 border border-amber-300 px-2 py-1 rounded font-semibold">👤 Customer: {DEMO_SCENARIO.customer_id}</span>
+                <span className="font-mono bg-amber-100 text-amber-800 border border-amber-300 px-2 py-1 rounded font-semibold">🍽️ Restaurant: {DEMO_SCENARIO.restaurant_id}</span>
               </div>
-              <div className="text-xs text-slate-500 mb-2 italic">Same customer, same restaurant — reordering the same items that caused the complaint:</div>
+              <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 px-3 py-2 rounded mb-3 font-medium">⚠️ Same customer · Same restaurant · Same dishes — identical to the order that caused the complaint</div>
               <div className="space-y-1.5">
                 {DEMO_SCENARIO.new_order.items.map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-slate-700 bg-slate-50 border border-slate-200 px-3 py-2 rounded">
