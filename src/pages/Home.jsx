@@ -1,5 +1,62 @@
+import { useState } from "react";
 import LiveDemo from "./LiveDemo";
 import { ArrowRight, AlertCircle, RefreshCw, CheckCircle2, Zap } from "lucide-react";
+import { base44 } from "@/api/base44Client";
+
+function WaitlistSection() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("loading");
+    try {
+      await base44.entities.WaitlistEntry.create({ email });
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  return (
+    <section className="py-24 px-6 bg-[#0B1629]">
+      <div className="max-w-xl mx-auto text-center">
+        <p className="text-xs font-semibold text-blue-400 uppercase tracking-widest mb-3">Early Access</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">Join the waitlist</h2>
+        <p className="text-slate-400 text-base mb-8">Be the first to know when Golden Line is ready for your team.</p>
+        {status === "success" ? (
+          <div className="flex items-center justify-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-6 py-4 rounded-xl">
+            <CheckCircle2 className="w-5 h-5 shrink-0" />
+            <span className="font-medium">You're on the list! We'll be in touch.</span>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              required
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 bg-white/10 border border-white/20 text-white placeholder-slate-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-colors"
+            />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-200 whitespace-nowrap"
+            >
+              {status === "loading" ? "Joining..." : <>Get Early Access <ArrowRight className="w-4 h-4" /></>}
+            </button>
+          </form>
+        )}
+        {status === "error" && (
+          <p className="text-red-400 text-xs mt-3">Something went wrong. Please try again.</p>
+        )}
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   return (
@@ -101,6 +158,9 @@ export default function Home() {
         </div>
         <LiveDemo />
       </section>
+
+      {/* ── WAITLIST ── */}
+      <WaitlistSection />
 
       {/* ── FOOTER ── */}
       <footer className="py-6 px-6 border-t border-slate-100 bg-white">
