@@ -3,7 +3,7 @@ import LiveDemo from "./LiveDemo";
 import { ArrowRight, AlertCircle, RefreshCw, CheckCircle2, Zap } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 
-function WaitlistSection() {
+function WaitlistSection({ inline = false }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
 
@@ -19,6 +19,27 @@ function WaitlistSection() {
       setStatus("error");
     }
   };
+
+  if (inline) return (
+    <div className="text-center">
+      <p className="text-slate-400 text-sm mb-3">Join the waitlist — be first in line.</p>
+      {status === "success" ? (
+        <div className="flex items-center justify-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-5 py-3 rounded-xl text-sm">
+          <CheckCircle2 className="w-4 h-4 shrink-0" /> You're on the list!
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+          <input type="email" required placeholder="your@email.com" value={email} onChange={(e) => setEmail(e.target.value)}
+            className="flex-1 bg-white/10 border border-white/20 text-white placeholder-slate-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-colors" />
+          <button type="submit" disabled={status === "loading"}
+            className="inline-flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all whitespace-nowrap">
+            {status === "loading" ? "Joining..." : <>Join <ArrowRight className="w-3.5 h-3.5" /></>}
+          </button>
+        </form>
+      )}
+      {status === "error" && <p className="text-red-400 text-xs mt-2">Something went wrong. Please try again.</p>}
+    </div>
+  );
 
   return (
     <section className="py-24 px-6 bg-[#0B1629]">
@@ -99,6 +120,11 @@ export default function Home() {
           >
             See it in action <ArrowRight className="w-4 h-4" />
           </a>
+
+          {/* Inline waitlist */}
+          <div className="mt-10 max-w-md mx-auto">
+            <WaitlistSection inline />
+          </div>
         </div>
       </section>
 
