@@ -111,13 +111,6 @@ export default function Home() {
             Stop Repeat Refunds.<br />
             <span className="text-blue-400">Close the Loop</span> Between<br className="hidden sm:block" /> CS and Operations.
           </h1>
-          <a
-              href="#demo"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:shadow-blue-700/40 hover:-translate-y-0.5"
-          >
-            See it in action <ArrowRight className="w-4 h-4" />
-          </a>
-
           {/* Inline waitlist */}
           <div className="mt-10 max-w-md mx-auto bg-white rounded-2xl px-6 py-6 shadow-2xl">
             <WaitlistSection inline />
