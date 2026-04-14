@@ -22,22 +22,22 @@ function WaitlistSection({ inline = false }) {
 
   if (inline) return (
     <div className="text-center">
-      <p className="text-slate-400 text-sm mb-3">Join the waitlist — be first in line.</p>
+      <p className="text-amber-900 font-semibold text-sm mb-3">Join the waitlist, be first in line.</p>
       {status === "success" ? (
-        <div className="flex items-center justify-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-5 py-3 rounded-xl text-sm">
+        <div className="flex items-center justify-center gap-2 bg-white/30 border border-white/50 text-amber-900 px-5 py-3 rounded-xl text-sm font-medium">
           <CheckCircle2 className="w-4 h-4 shrink-0" /> You're on the list!
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
           <input type="email" required placeholder="your@email.com" value={email} onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 bg-white/10 border border-white/20 text-white placeholder-slate-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-colors" />
+            className="flex-1 bg-white/60 border border-white/80 text-slate-900 placeholder-amber-800/60 rounded-xl px-4 py-3 text-sm focus:outline-none focus:bg-white transition-colors" />
           <button type="submit" disabled={status === "loading"}
-            className="inline-flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-60 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all whitespace-nowrap">
+            className="inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-800 disabled:opacity-60 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all whitespace-nowrap">
             {status === "loading" ? "Joining..." : <>Join <ArrowRight className="w-3.5 h-3.5" /></>}
           </button>
         </form>
       )}
-      {status === "error" && <p className="text-red-400 text-xs mt-2">Something went wrong. Please try again.</p>}
+      {status === "error" && <p className="text-red-700 text-xs mt-2">Something went wrong. Please try again.</p>}
     </div>
   );
 
@@ -119,7 +119,7 @@ export default function Home() {
           </a>
 
           {/* Inline waitlist */}
-          <div className="mt-10 max-w-md mx-auto bg-white/5 border border-white/10 rounded-2xl px-6 py-6 backdrop-blur-sm">
+          <div className="mt-10 max-w-md mx-auto bg-amber-400/90 rounded-2xl px-6 py-6 shadow-xl shadow-amber-500/20">
             <WaitlistSection inline />
           </div>
         </div>
