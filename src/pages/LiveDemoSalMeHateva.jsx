@@ -6,17 +6,17 @@ import { base44 } from "@/api/base44Client";
 
 const DEMO = {
   customer: { name: "מירה כהן", id: "CUST-4412", phone: "052-8834421" },
-  complaint: "קיבלתי את הסל היום וחצי מהירקות היו מרוקבים - המלפפונים והעלים הירוקים לא ראויים לאכילה. מאוד מאכזב אחרי שאני לקוחה נאמנה כבר שנתיים.",
+  complaint: "קיבלתי את הסל היום וממש אכזבה - התמרים הגיעו יבשים לחלוטין ולא טריים בכלל, והקלמנטינות היו רקובות. אני לקוחה נאמנה כבר שנתיים ומצפה לרמה גבוהה יותר.",
   analysis: {
-    action_code: "נזק_באריזה",
-    golden_line: "לבדוק את איכות הירקות הרגישים - מלפפון/עלים ירוקים - לפני סגירת הסל",
-    evidence: "המלפפונים והעלים הירוקים לא ראויים לאכילה",
-    reasoning: "המוצרים הרגישים (מלפפונים ועלים) לא נבדקו לפני אריזה, הגיעו ללקוח ברמת איכות נמוכה.",
-    confidence: 0.94,
+    action_code: "איכות_פרי",
+    golden_line: "לבדוק תמרים וקלמנטינות לפני אריזה — לא לארוז פרי יבש או רקוב",
+    evidence: "התמרים הגיעו יבשים לחלוטין ולא טריים בכלל, והקלמנטינות היו רקובות",
+    reasoning: "פירות רגישים (תמרים וקלמנטינות) נארזו ללא בדיקת טריות, הגיעו ללקוחה במצב לא ראוי.",
+    confidence: 0.96,
   },
   order: {
     id: "ORD-78831",
-    items: ["🥒 מלפפונים (500 גר')", "🥬 תרד טרי - עלים ירוקים", "🍅 עגבניות שרי", "🍋 לימונים מהחווה", "🌿 פטרוזיליה טרייה"],
+    items: ["🌴 תמרים מג'הול טריים (500 גר')", "🍊 קלמנטינות (1 ק\"ג)", "🍅 עגבניות שרי", "🍋 לימונים מהחווה", "🌿 פטרוזיליה טרייה"],
   },
 };
 
@@ -141,7 +141,7 @@ export default function LiveDemoSalMeHateva() {
           {/* Step 1a — WhatsApp Complaint */}
           <DemoCard
             icon={<MessageSquare className="w-4 h-4" />}
-            label="תלונת לקוח — וואטסאפ"
+            label="תלונת לקוח — CRM"
             active={step === "p1_ticket"}
             done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)}
             idle={step === "idle"}
@@ -164,7 +164,7 @@ export default function LiveDemoSalMeHateva() {
               )}
             </div>
             <div className="flex items-center justify-between mt-2 text-[10px] text-slate-400">
-              <span>📱 WhatsApp · הגיע ל-CS</span>
+              <span>📋 CRM · הגיע ל-CS</span>
               <span>14/04/2026 · 09:32</span>
             </div>
           </DemoCard>
@@ -348,15 +348,15 @@ export default function LiveDemoSalMeHateva() {
                   </div>
 
                   <div className="bg-amber-500/15 border-2 border-amber-400 rounded-xl p-4 mb-3">
-                    <div className="text-amber-300 text-[10px] font-bold uppercase tracking-widest mb-2">⚠️ לקוח מיוחד</div>
-                    <div className="text-white text-lg font-bold text-right leading-snug">
-                      לקוח מיוחד — לבדוק כל פריט לפני סגירת הסל
+                    <div className="text-amber-300 text-[10px] font-bold uppercase tracking-widest mb-2">⚠️ הנחיית Golden Line לארז</div>
+                    <div className="text-white text-xl font-bold text-right leading-snug">
+                      {DEMO.analysis.golden_line}
                     </div>
                   </div>
 
                   <div className="bg-green-900/40 border border-green-600/40 rounded-lg px-4 py-3">
-                    <div className="text-green-300 text-xs font-medium text-right leading-relaxed">
-                      🌿 {DEMO.analysis.golden_line}
+                    <div className="text-green-300 text-sm font-semibold text-right leading-relaxed">
+                      ✅ התלונה הזו לא תחזור — הארז קיבל הנחיה ברורה לפני שסגר את הסל
                     </div>
                   </div>
                 </div>
