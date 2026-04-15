@@ -170,7 +170,7 @@ export default function LiveDemoSalMeHateva() {
           {["p1_analyzing", "p1_stored", ...PHASE2].includes(step) && (
             <DemoCard
               icon={<Brain className="w-4 h-4" />}
-              label="ניתוח AI אוטומטי"
+              label="Agentic AI Analysis"
               active={step === "p1_analyzing"}
               done={["p1_stored", ...PHASE2].includes(step)}
             >
