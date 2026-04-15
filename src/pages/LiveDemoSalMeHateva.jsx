@@ -240,11 +240,9 @@ export default function LiveDemoSalMeHateva() {
                   <div className="text-xs mt-0.5" style={{ color: "#4a8c4a" }}>{DEMO.customer.name} — מסומנת כ"לקוחה מיוחדת" במערכת</div>
                 </div>
               </div>
-              <div className="mt-3 px-3 py-2 text-xs text-right rounded-lg" style={{ backgroundColor: "#fffbf0", border: "1px solid #fcd9aa", color: "#7a5a1a" }}>
-                💡 בעבר: הCSM הייתה מוסיפה ידנית לאקסל "מיוחדים". עכשיו זה אוטומטי.
-              </div>
+
               {savedDebtId && (
-                <p className="text-[11px] text-slate-400 mt-2 text-right">נשמר ב-DATABASE מספר מזהה: <code className="font-mono">{savedDebtId}</code></p>
+                <p className="text-[11px] text-slate-400 mt-2 text-right">נשמר ב-Database מספר מזהה: <code className="font-mono">{savedDebtId}</code></p>
               )}
             </DemoCard>
           )}
