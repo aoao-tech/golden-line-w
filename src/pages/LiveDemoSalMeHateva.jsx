@@ -335,7 +335,7 @@ export default function LiveDemoSalMeHateva() {
                   </div>
                   <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "rgba(45,106,45,0.3)", border: "1px solid rgba(74,140,74,0.5)" }}>
                     <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: "#86efac" }}>
-                      ✅ הארז קיבל את ההנחיה כהודעה קופצת כשנכנס לארוז ללקוחה, או בהערות תחת המוצר הרלוונטי בהזמנה
+                      ✅ האורז קיבל את ההנחיה כהודעה קופצת כשנכנס לארוז ללקוחה, או בהערות תחת המוצר הרלוונטי בהזמנה
                     </div>
                   </div>
                 </div>
