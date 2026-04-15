@@ -94,7 +94,7 @@ export default function LiveDemoSalMeHateva() {
           <img
             src="https://media.base44.com/images/public/69b423f49e2a082212fdad99/6e9a8862f_image.png"
             alt="סל מהטבע"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)" }} />
           <div className="absolute bottom-3 left-4 text-right">
