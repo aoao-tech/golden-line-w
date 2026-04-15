@@ -7,7 +7,7 @@ const DEMO = {
   complaint: "קיבלתי את הסל היום וממש אכזבה - התמרים הגיעו יבשים לחלוטין ולא לחים בכלל, והקלמנטינות היו רקובות.",
   analysis: {
     action_code: "איכות_פרי",
-    golden_line: "⚠️ לקוחה זו התלוננה על תמרים לא לחים וקלמנטינות רקובות",
+    golden_line: "לקוחה זו התלוננה על תמרים לא לחים וקלמנטינות רקובות",
     evidence: "התמרים הגיעו יבשים לחלוטין ולא לחים בכלל, והקלמנטינות היו רקובות",
     reasoning: "פירות רגישים (תמרים וקלמנטינות) נארזו ללא בדיקת איכות — התמרים לא היו לחים והקלמנטינות הגיעו רקובות.",
     confidence: 0.96,
@@ -302,7 +302,7 @@ export default function LiveDemoSalMeHateva() {
               )}
               {["p2_triggering", "p2_injected"].includes(step) && (
                 <div className="flex items-center gap-2 text-xs font-medium px-3 py-2 rounded-lg" style={{ backgroundColor: "#fffbf0", border: "1px solid #fcd9aa", color: "#7a5a1a" }}>
-                  ⚠️ לקוחה מיוחדת זוהתה! מזריק Golden Line לתחנת האריזה...
+                  לקוחה מיוחדת זוהתה! מזריק Golden Line לתחנת האריזה...
                 </div>
               )}
             </DemoCard>
@@ -335,7 +335,7 @@ export default function LiveDemoSalMeHateva() {
                     <span className="text-xs mr-2" style={{ color: "#666" }}>mypips — תחנת אריזה</span>
                   </div>
                   <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(217,119,6,0.15)", border: "2px solid #d97706" }}>
-                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#fbbf24" }}>⚠️ הנחיית Golden Line לארז</div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#fbbf24" }}>הנחיית Golden Line לארז</div>
                     <div className="text-white text-lg font-bold text-right leading-snug">
                       {DEMO.analysis.golden_line}
                     </div>
