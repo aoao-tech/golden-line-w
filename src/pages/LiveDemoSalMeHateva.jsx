@@ -89,24 +89,29 @@ export default function LiveDemoSalMeHateva() {
     <div className="min-h-screen p-5 md:p-8" style={{ backgroundColor: "#e8f5e2", direction: "rtl" }}>
 
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ backgroundColor: "#2d6a2d" }}>
-            💚
-          </div>
-          <div>
-            <h1 className="text-xl font-bold text-slate-900">סל מהטבע - דפנה אמון</h1>
-            <p className="text-xs font-medium" style={{ color: "#4a8c4a" }}>דמו Golden Line • מופעל על mypips.app</p>
+      <div className="mb-6">
+        <div className="relative rounded-2xl overflow-hidden mb-3" style={{ height: "130px" }}>
+          <img
+            src="https://media.base44.com/images/public/69b423f49e2a082212fdad99/6e9a8862f_image.png"
+            alt="סל מהטבע"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to left, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)" }} />
+          <div className="absolute bottom-3 left-4 text-right">
+            <p className="text-xs font-medium text-white/80">דמו Golden Line • מופעל על mypips.app</p>
           </div>
         </div>
-        {step !== "idle" && (
-          <button
-            onClick={reset}
-            className="flex items-center gap-1.5 text-sm font-medium text-slate-600 border border-slate-300 rounded-lg px-3 py-2 bg-white hover:bg-slate-50"
-          >
-            <RotateCcw className="w-3.5 h-3.5" /> אתחול
-          </button>
-        )}
+        <div className="flex items-center justify-between">
+          <div />
+          {step !== "idle" && (
+            <button
+              onClick={reset}
+              className="flex items-center gap-1.5 text-sm font-medium text-slate-600 border border-slate-300 rounded-lg px-3 py-2 bg-white hover:bg-slate-50"
+            >
+              <RotateCcw className="w-3.5 h-3.5" /> אתחול
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Start button - centered when idle */}
