@@ -104,7 +104,7 @@ export default function LiveDemoSalMeHateva() {
             💚
           </div>
           <div>
-            <h1 className="text-xl font-bold text-slate-900">סל מהטבע — דפנה אמון</h1>
+            <h1 className="text-xl font-bold text-slate-900">סל מהטבע - דפנה אמון</h1>
             <p className="text-xs font-medium" style={{ color: "#4a8c4a" }}>דמו Golden Line • מופעל על mypips.app</p>
           </div>
         </div>
