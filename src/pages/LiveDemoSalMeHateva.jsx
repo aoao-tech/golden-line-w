@@ -148,7 +148,6 @@ export default function LiveDemoSalMeHateva() {
             <div className="flex items-center gap-2 mb-3 flex-wrap text-xs">
               <span className="font-medium px-2 py-1 rounded-lg border" style={{ backgroundColor: "#f0faf0", borderColor: "#a3d9a3", color: "#1a5c1a" }}>👤 {DEMO.customer.name}</span>
               <span className="font-mono px-2 py-1 rounded-lg bg-orange-100 text-orange-700 border border-orange-200">{DEMO.customer.id}</span>
-              <span className="px-2 py-1 rounded-lg border text-green-700 font-medium" style={{ backgroundColor: "#f0faf0", borderColor: "#a3d9a3" }}>🏷 {DEMO.customer.name}</span>
             </div>
             <div className="rounded-xl px-4 py-3 text-sm text-slate-800 leading-relaxed min-h-[80px]" style={{ backgroundColor: "#f5f5f5", border: "1px solid #e0e0e0" }}>
               {step === "idle" ? (
@@ -343,7 +342,7 @@ export default function LiveDemoSalMeHateva() {
                   </div>
                   <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "rgba(45,106,45,0.3)", border: "1px solid rgba(74,140,74,0.5)" }}>
                     <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: "#86efac" }}>
-                      ✅ התלונה הזו לא תחזור — הארז קיבל הנחיה ברורה לפני שסגר את הסל
+                      ✅ הארז קיבל את ההנחיה כהודעה קופצת כשנכנס לארוז ללקוחה, או בהערות תחת המוצר הרלוונטי בהזמנה
                     </div>
                   </div>
                 </div>
