@@ -11,6 +11,7 @@ import OperationalDebts from './pages/OperationalDebts';
 import InjectionEvents from './pages/InjectionEvents';
 import LiveDemo from './pages/LiveDemo';
 import Home from './pages/Home';
+import LiveDemoSalMeHateva from './pages/LiveDemoSalMeHateva';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -36,6 +37,7 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/LiveDemo" element={<LiveDemo />} />
+      <Route path="/LiveDemoSalMeHateva" element={<LiveDemoSalMeHateva />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
