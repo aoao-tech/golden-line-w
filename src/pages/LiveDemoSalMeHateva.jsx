@@ -43,17 +43,8 @@ export default function LiveDemoSalMeHateva() {
 
   const startPhase1 = () => {
     setStep("p1_ticket");
-    setDisplayedText("");
-    let i = 0;
-    const text = DEMO.complaint;
-    intervalRef.current = setInterval(() => {
-      i++;
-      setDisplayedText(text.slice(0, i));
-      if (i >= text.length) {
-        clearInterval(intervalRef.current);
-        setTimeout(() => runAnalysis(), 700);
-      }
-    }, 22);
+    setDisplayedText(DEMO.complaint);
+    setTimeout(() => runAnalysis(), 800);
   };
 
   const runAnalysis = async () => {
@@ -151,12 +142,9 @@ export default function LiveDemoSalMeHateva() {
             </div>
             <div className="rounded-xl px-4 py-3 text-sm text-slate-800 leading-relaxed min-h-[80px]" style={{ backgroundColor: "#f5f5f5", border: "1px solid #e0e0e0" }}>
               {step === "idle" ? (
-                <span className="text-slate-400 italic text-xs">ממתין לקבלת תלונה מה-CRM...</span>
+                DEMO.complaint
               ) : (
-                <>
-                  {displayedText}
-                  {step === "p1_ticket" && <span className="inline-block w-0.5 h-4 bg-slate-600 ml-0.5 animate-pulse" />}
-                </>
+                displayedText
               )}
             </div>
             <div className="flex items-center justify-between mt-2 text-[10px] text-slate-400">
