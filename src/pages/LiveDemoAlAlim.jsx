@@ -110,7 +110,7 @@ export default function LiveDemoAlAlim() {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-xs font-medium" style={{ color: GREEN }}>דמו Golden Line • מופעל על mypips.app</p>
+            <p className="text-xs font-medium" style={{ color: GREEN }}>דמו Golden Line • מופעל על al-alim.co.il</p>
           </div>
         </div>
         <div className="flex items-center justify-between">
@@ -239,7 +239,7 @@ export default function LiveDemoAlAlim() {
             <div className="flex flex-col items-center justify-center py-14 text-center rounded-2xl" style={{ border: `2px dashed ${GREEN_BORDER}`, backgroundColor: "#f5f5f0" }}>
               <ShoppingCart className="w-10 h-10 mb-3" style={{ color: GREEN_BORDER }} />
               <p className="text-sm text-slate-600 mb-1 font-medium">{DEMO.customer.name} מגיש הזמנה חדשה</p>
-              <p className="text-xs text-slate-400 mb-5">דרך mypips.app · אותה חנות</p>
+              <p className="text-xs text-slate-400 mb-5">דרך al-alim.co.il · אותה חנות</p>
               <button
                 onClick={startPhase2}
                 className="text-white font-bold text-sm px-6 py-2.5 rounded-xl hover:opacity-90 transition-opacity"
@@ -259,7 +259,7 @@ export default function LiveDemoAlAlim() {
 
           {/* Step 2a — New Order */}
           {PHASE2.includes(step) && (
-            <DemoCard icon={<ShoppingCart className="w-4 h-4" />} label="הזמנה חדשה נכנסת — mypips.app" active={step === "p2_order"} done={["p2_triggering", "p2_injected"].includes(step)} green={GREEN} greenBorder={GREEN_BORDER} greenLight={GREEN_LIGHT}>
+            <DemoCard icon={<ShoppingCart className="w-4 h-4" />} label="הזמנה חדשה נכנסת — al-alim.co.il" active={step === "p2_order"} done={["p2_triggering", "p2_injected"].includes(step)} green={GREEN} greenBorder={GREEN_BORDER} greenLight={GREEN_LIGHT}>
               <div className="flex flex-wrap items-center gap-2 mb-3 text-xs">
                 <span className="font-mono px-2 py-1 rounded-lg bg-slate-100 text-slate-600">הזמנה: {DEMO.order.id}</span>
                 <span className="font-medium px-2 py-1 rounded-lg" style={{ backgroundColor: GREEN_LIGHT, border: `1px solid ${GREEN_BORDER}`, color: GREEN_DARK }}>👤 {DEMO.customer.name}</span>
@@ -305,7 +305,7 @@ export default function LiveDemoAlAlim() {
                     <div className="w-2 h-2 rounded-full bg-red-500" />
                     <div className="w-2 h-2 rounded-full bg-yellow-400" />
                     <div className="w-2 h-2 rounded-full bg-green-400" />
-                    <span className="text-xs mr-2" style={{ color: "#666" }}>mypips — תחנת אריזה</span>
+                    <span className="text-xs mr-2" style={{ color: "#666" }}>על עלים — תחנת אריזה</span>
                   </div>
                   <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(217,119,6,0.15)", border: "2px solid #d97706" }}>
                     <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#fbbf24" }}>הנחיית Golden Line לארז</div>
