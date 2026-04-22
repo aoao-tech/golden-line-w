@@ -72,12 +72,6 @@ export default function Home() {
       {/* HERO — dark navy */}
       <section className="text-center px-6 py-20 md:py-28" style={{ backgroundColor: "#0d1b2e" }}>
         <div className="max-w-3xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-blue-500/40 bg-blue-500/10 text-blue-300 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
-            <Zap className="w-3 h-3" />
-            AI-Powered Operations Intelligence
-          </div>
-
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Stop Repeat Refunds.{" "}
