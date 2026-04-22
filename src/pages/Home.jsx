@@ -23,7 +23,7 @@ function WaitlistForm({ large = false }) {
   if (status === "success") {
     return (
       <p className={`font-medium text-white ${large ? "text-base" : "text-sm"}`}>
-        You're on the list. We'll be in touch.
+        You're on the list, we'll be in touch
       </p>
     );
   }
@@ -74,15 +74,15 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-            Stop Repeat Refunds.{" "}
+            Stop Repeat Refunds{" "}
             <span className="text-blue-400">Close the Loop</span>{" "}
-            Between CS and Operations.
+            Between CS and Operations
           </h1>
 
           {/* Waitlist form card */}
           <div className="mt-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 max-w-lg mx-auto">
             <p className="text-white/80 text-sm font-medium mb-4">
-              Join the waitlist, be first in line.
+              Join the waitlist, be first in line
             </p>
             <WaitlistForm large />
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
                 Customer gets a refund
               </h3>
               <p className="text-sm text-slate-500 leading-relaxed mb-4">
-                A damaged delivery triggers a complaint. Your CS team issues a refund and closes the ticket in Salesforce. Case closed, or so it seems.
+                A damaged delivery triggers a complaint, your CS team issues a refund and closes the ticket in Salesforce, case closed, or so it seems
               </p>
               <p className="text-xs text-slate-400 font-medium">
                 💸 Refund issued · Ticket closed · Data buried in CRM
@@ -131,7 +131,7 @@ export default function Home() {
                 The same mistake happens again
               </h3>
               <p className="text-sm text-slate-500 leading-relaxed mb-4">
-                The customer reorders. The packer has no idea about the previous complaint. They pack it exactly the same way. Another damaged delivery. Another refund.
+                The customer reorders, the packer has no idea about the previous complaint, they pack it exactly the same way, another damaged delivery, another refund
               </p>
               <p className="text-xs text-slate-400 font-medium">
                 📦 Same packer · Same mistake · Same refund
@@ -151,7 +151,7 @@ export default function Home() {
             See it live, end to end
           </h2>
           <p className="text-center text-slate-500 text-sm mb-12">
-            From complaint to kitchen instruction in under 10 seconds.
+            From complaint to kitchen instruction in under 10 seconds
           </p>
           <LiveDemo />
         </div>
@@ -167,7 +167,7 @@ export default function Home() {
             Join the waitlist
           </h2>
           <p className="text-slate-500 text-sm mb-8">
-            Be the first to know when Golden Line is ready for your team.
+            Be the first to know when Golden Line is ready for your team
           </p>
           <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
             <WaitlistForm />
