@@ -53,22 +53,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
 
-      {/* NAV */}
-      <nav className="px-6 py-4 flex items-center justify-between bg-white border-b border-slate-100">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-            <span className="text-slate-900 font-bold text-xs">GL</span>
-          </div>
-          <span className="font-semibold text-base">Golden Line</span>
-        </div>
-        <a
-          href="#demo"
-          className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
-        >
-          Live Demo
-        </a>
-      </nav>
-
       {/* HERO — dark navy */}
       <section className="text-center px-6 py-20 md:py-28" style={{ backgroundColor: "#0d1b2e" }}>
         <div className="max-w-3xl mx-auto">
