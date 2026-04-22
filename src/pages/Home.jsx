@@ -59,7 +59,7 @@ export default function Home() {
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Stop Repeat Refunds<br />
-            <span className="text-blue-400">Close the Loop Between CS and Operations</span>
+            <span className="text-blue-400">Close the Loop</span> Between CS and Operations
           </h1>
 
           {/* Waitlist form card */}
