@@ -64,18 +64,28 @@ export default function Home() {
         </a>
       </nav>
 
+      {/* GET EARLY ACCESS - TOP */}
+      <section className="text-center px-6 pt-16 pb-10 max-w-2xl mx-auto">
+        <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          Get early access.
+        </h2>
+        <p className="text-base text-slate-500 mb-8 leading-relaxed">
+          We're onboarding a small set of food delivery and e-commerce teams. Leave your email and we'll reach out.
+        </p>
+        <WaitlistForm />
+      </section>
+
       {/* HERO */}
-      <section className="text-center px-6 pt-20 pb-24 max-w-3xl mx-auto">
+      <section className="text-center px-6 pt-8 pb-24 max-w-3xl mx-auto">
         <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">
           Operations Intelligence
         </p>
         <h1 className="text-5xl sm:text-6xl font-bold leading-[1.08] tracking-tight text-slate-900 mb-6">
           Stop paying for the same mistake twice.
         </h1>
-        <p className="text-lg text-slate-500 mb-10 max-w-xl mx-auto leading-relaxed">
+        <p className="text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">
           Golden Line connects your CS complaints directly to your operations so the same packaging error never causes a refund twice.
         </p>
-        <WaitlistForm />
       </section>
 
       {/* PROBLEM */}
@@ -110,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* DEMO */}
-      <section id="demo" className="bg-slate-50 border-y border-slate-100 px-6 py-20 mb-0">
+      <section id="demo" className="px-6 py-20 border-t border-slate-100">
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3 text-center">
             Live Demo
@@ -120,17 +130,6 @@ export default function Home() {
           </h2>
           <LiveDemo />
         </div>
-      </section>
-
-      {/* WAITLIST */}
-      <section className="text-center px-6 py-24 max-w-2xl mx-auto">
-        <h2 className="text-4xl font-bold text-slate-900 mb-4">
-          Get early access.
-        </h2>
-        <p className="text-base text-slate-500 mb-8 leading-relaxed">
-          We're onboarding a small set of food delivery and e-commerce teams. Leave your email and we'll reach out.
-        </p>
-        <WaitlistForm />
       </section>
 
       {/* FOOTER */}
