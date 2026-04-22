@@ -102,28 +102,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="py-24 px-6 bg-slate-950 text-white">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">How it works</p>
-          <h2 className="text-3xl font-bold mb-12">Three steps. Zero manual work.</h2>
-          <div className="space-y-8">
-            {[
-              { num: "01", title: "Complaint comes in", desc: "A customer complaint lands in your CRM — damaged item, wrong product, spilled soup." },
-              { num: "02", title: "AI extracts the Golden Line", desc: "Golden Line reads the ticket and generates a precise packing instruction: what went wrong, and how to prevent it." },
-              { num: "03", title: "Injected on next order", desc: "When the same customer reorders, the packer sees the instruction before touching the box. Problem solved." },
-            ].map(({ num, title, desc }) => (
-              <div key={num} className="flex gap-6 items-start">
-                <span className="text-slate-600 font-mono text-sm pt-1 shrink-0">{num}</span>
-                <div>
-                  <h3 className="font-semibold text-white mb-1">{title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* DEMO */}
       <section id="demo" className="py-24 px-6 border-t border-slate-100">
