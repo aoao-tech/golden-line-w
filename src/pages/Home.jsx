@@ -105,14 +105,14 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-4">
                 <AlertCircle className="w-4 h-4 text-orange-400" />
                 <span className="text-xs font-bold uppercase tracking-widest text-orange-500">
-                  Step 1 — The Dead End
+                  Step 1: The Dead End
                 </span>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">
                 Customer gets a refund
               </h3>
               <p className="text-sm text-slate-500 leading-relaxed mb-4">
-                A damaged delivery triggers a complaint. Your CS team issues a refund and closes the ticket in Salesforce. Case closed — or so it seems.
+                A damaged delivery triggers a complaint. Your CS team issues a refund and closes the ticket in Salesforce. Case closed, or so it seems.
               </p>
               <p className="text-xs text-slate-400 font-medium">
                 💸 Refund issued · Ticket closed · Data buried in CRM
@@ -124,7 +124,7 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-4">
                 <RefreshCw className="w-4 h-4 text-orange-400" />
                 <span className="text-xs font-bold uppercase tracking-widest text-orange-500">
-                  Step 2 — The Repeat
+                  Step 2: The Repeat
                 </span>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">
@@ -148,7 +148,7 @@ export default function Home() {
             Interactive Demo
           </p>
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-3">
-            See it live — end to end
+            See it live, end to end
           </h2>
           <p className="text-center text-slate-500 text-sm mb-12">
             From complaint to kitchen instruction in under 10 seconds.
