@@ -28,8 +28,8 @@ const DEMO_SCENARIO = {
 // Phase 2 steps: p2_order → p2_triggering → p2_injected
 
 export default function LiveDemo() {
-  const [step, setStep] = useState("idle");
-  const [displayedText, setDisplayedText] = useState("");
+  const [step, setStep] = useState("p1_ticket");
+  const [displayedText, setDisplayedText] = useState(DEMO_SCENARIO.complaint);
   const [analyzeProgress, setAnalyzeProgress] = useState(0);
   const [savedDebtId, setSavedDebtId] = useState(null);
   const intervalRef = useRef(null);
@@ -44,16 +44,10 @@ export default function LiveDemo() {
 
   const reset = () => {
     clearInterval(intervalRef.current);
-    setStep("idle");
-    setDisplayedText("");
-    setAnalyzeProgress(0);
-    setSavedDebtId(null);
-  };
-
-  const startPhase1 = () => {
     setStep("p1_ticket");
     setDisplayedText(DEMO_SCENARIO.complaint);
-    setTimeout(() => runAnalysis(), 600);
+    setAnalyzeProgress(0);
+    setSavedDebtId(null);
   };
 
   const runAnalysis = async () => {
@@ -104,14 +98,14 @@ export default function LiveDemo() {
           <p className="text-sm text-slate-500 ml-8">End-to-end Golden Line flow — from complaint to kitchen protection</p>
         </div>
         <div className="flex gap-2">
-          {step !== "idle" && (
+          {step !== "p1_ticket" && (
             <Button variant="outline" size="sm" onClick={reset}>
               <RotateCcw className="w-3.5 h-3.5 mr-1.5" /> Reset
             </Button>
           )}
-          {step === "idle" && (
-            <Button className="bg-amber-500 hover:bg-amber-600 text-white" onClick={startPhase1}>
-              <Play className="w-4 h-4 mr-2" /> Start Demo
+          {step === "p1_ticket" && (
+            <Button className="bg-amber-500 hover:bg-amber-600 text-white" onClick={runAnalysis}>
+              <Play className="w-4 h-4 mr-2" /> Analyze Ticket
             </Button>
           )}
         </div>
@@ -143,14 +137,7 @@ export default function LiveDemo() {
               <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 font-normal text-[10px]">Closed</Badge>
             </div>
             <div className="bg-white rounded-lg border border-slate-200 p-3 text-sm text-slate-700 leading-relaxed min-h-[80px]">
-              {step === "idle" ? (
-                <span className="text-slate-300 italic">Fetching closed ticket from CRM...</span>
-              ) : (
-                <>
-                  {displayedText}
-                  {step === "p1_ticket" && <span className="inline-block w-0.5 h-4 bg-slate-600 ml-0.5 animate-pulse" />}
-                </>
-              )}
+              {displayedText}
             </div>
           </DemoCard>
 
@@ -258,12 +245,7 @@ export default function LiveDemo() {
             </div>
           )}
 
-          {step === "idle" && (
-            <div className="flex flex-col items-center justify-center py-10 text-center border-2 border-dashed border-slate-100 rounded-xl opacity-40">
-              <ShoppingCart className="w-8 h-8 text-slate-300 mb-2" />
-              <p className="text-xs text-slate-400">Complete Phase 1 to unlock</p>
-            </div>
-          )}
+
 
           {/* Step 2a — New Order Placed */}
           {PHASE2_STEPS.includes(step) && (
@@ -336,15 +318,7 @@ export default function LiveDemo() {
         </div>
       </div>
 
-      {/* Idle state */}
-      {step === "idle" && (
-        <div className="flex flex-col items-center justify-center py-16 text-center mt-4">
-          <div className="w-14 h-14 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center mb-4">
-            <Play className="w-5 h-5 text-amber-500" />
-          </div>
-          <p className="text-slate-500 text-sm max-w-md">Press <strong>Start Demo</strong> to simulate the full Golden Line flow, from a closed support ticket all the way to real-time kitchen protection on the next order.</p>
-        </div>
-      )}
+
     </div>
   );
 }
