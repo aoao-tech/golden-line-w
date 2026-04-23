@@ -60,6 +60,7 @@ export default function Home() {
             <span className="text-blue-400">Close the Loop</span> Between CS and Operations
           </h1>
           <p className="text-white/60 text-base mt-4 mb-10">From complaint to kitchen instruction in under 10 seconds</p>
+          <p className="text-white/80 text-sm font-medium mb-4">🚀 Join the waitlist — be first in line when Golden Line launches</p>
           <WaitlistForm large />
         </div>
       </section>
