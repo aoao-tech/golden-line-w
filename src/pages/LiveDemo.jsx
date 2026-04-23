@@ -105,7 +105,7 @@ export default function LiveDemo() {
           )}
           {step === "p1_ticket" && (
             <Button className="bg-amber-500 hover:bg-amber-600 text-white" onClick={runAnalysis}>
-              <Play className="w-4 h-4 mr-2" /> Analyze Ticket
+              <Play className="w-4 h-4 mr-2" /> Start Demo
             </Button>
           )}
         </div>
