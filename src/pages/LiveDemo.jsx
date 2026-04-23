@@ -52,17 +52,8 @@ export default function LiveDemo() {
 
   const startPhase1 = () => {
     setStep("p1_ticket");
-    setDisplayedText("");
-    let i = 0;
-    const text = DEMO_SCENARIO.complaint;
-    intervalRef.current = setInterval(() => {
-      i++;
-      setDisplayedText(text.slice(0, i));
-      if (i >= text.length) {
-        clearInterval(intervalRef.current);
-        setTimeout(() => runAnalysis(), 600);
-      }
-    }, 20);
+    setDisplayedText(DEMO_SCENARIO.complaint);
+    setTimeout(() => runAnalysis(), 600);
   };
 
   const runAnalysis = async () => {
