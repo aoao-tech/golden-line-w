@@ -54,12 +54,13 @@ export default function Home() {
 
       {/* HERO — dark navy */}
       <section className="text-center px-6 py-16 md:py-24" style={{ backgroundColor: "#0d1b2e" }}>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-4">
             Stop Repeat Refunds<br />
             <span className="text-blue-400">Close the Loop</span> Between CS and Operations
           </h1>
-          <p className="text-white/60 text-base mt-4">From complaint to kitchen instruction in under 10 seconds</p>
+          <p className="text-white/60 text-base mt-4 mb-10">From complaint to kitchen instruction in under 10 seconds</p>
+          <WaitlistForm large />
         </div>
       </section>
 
