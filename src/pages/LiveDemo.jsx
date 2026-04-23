@@ -126,7 +126,7 @@ export default function LiveDemo() {
           {/* Step 1a — CRM Ticket */}
           <DemoCard
             icon={<MessageSquare className="w-4 h-4" />}
-            label="Closed Support Ticket (Zendesk)"
+            label="Closed Support Ticket"
             active={step === "p1_ticket"}
             done={["p1_analyzing", "p1_stored", ...PHASE2_STEPS].includes(step)}
             idle={step === "idle"}
