@@ -5,7 +5,7 @@ import { base44 } from "@/api/base44Client";
 const DEMO = {
   customer: { name: "אורי לוי", id: "CUST-8821", phone: "053-7741882" },
   ticket_id: "ZD-91233",
-  complaint: "הזמנתי מ-KYOTO וה-Gyoza הגיעה ספוגה בשמן וכמעט בלתי אכילה. גם הרול התפרק לחלוטין בשקית — לא הייתה שום הפרדה בין המנות ואחת מעכה את השנייה. אני מצפה לרמה הרבה יותר גבוהה.",
+  complaint: "ה-Gyoza הגיעה ספוגה בשמן — הבצק היה רטוב ודייסתי. לא ניתן לאכול.",
   analysis: {
     action_code: "GYOZA_OIL_ABSORB",
     golden_line: "לשים נייר סופג שמן מתחת ל-Gyoza לפני סגירת המכל",
@@ -145,7 +145,7 @@ export default function LiveDemoTabit() {
               <PhaseHeader number="1" title="זיהוי תלונה ולמידה" subtitle="תלונת Tabit ← ניתוח AI ← Golden Line נשמר" active={inPhase1} done={phase1Done} />
 
               {/* Step 1a — Ticket */}
-              <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — Tabit CRM" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)} onAction={step === "p1_ticket" ? runAnalysis : null} actionLabel="נתח תלונה">
+              <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — Tabit CRM" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)}>
                 <div className="flex items-center gap-2 mb-3 flex-wrap text-xs">
                   <span className="font-medium px-2 py-1 rounded-lg" style={{ backgroundColor: TABIT_TEAL_LIGHT, border: `1px solid ${TABIT_TEAL_BORDER}`, color: TABIT_TEAL }}>👤 {DEMO.customer.name}</span>
                   <span className="font-mono px-2 py-1 rounded-lg" style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.4)", border: "1px solid rgba(255,255,255,0.1)" }}>{DEMO.ticket_id}</span>
@@ -157,6 +157,15 @@ export default function LiveDemoTabit() {
                   <span>📋 Tabit CRM</span>
                   <span>24/04/2026 · 13:47</span>
                 </div>
+                {step === "p1_ticket" && (
+                  <button
+                    onClick={runAnalysis}
+                    className="w-full mt-4 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                    style={{ backgroundColor: TABIT_TEAL, color: TABIT_DARK }}
+                  >
+                    <Brain className="w-4 h-4" /> הפעל ניתוח AI
+                  </button>
+                )}
               </DemoCard>
 
               {/* Step 1b — AI Analysis */}
@@ -338,11 +347,10 @@ function PhaseHeader({ number, title, subtitle, active, done, locked }) {
   );
 }
 
-function DemoCard({ icon, label, active, done, children, onAction, actionLabel }) {
+function DemoCard({ icon, label, active, done, children }) {
   const TABIT_TEAL = "#3ec6c6";
   const TABIT_TEAL_LIGHT = "rgba(62,198,198,0.12)";
   const TABIT_TEAL_BORDER = "rgba(62,198,198,0.4)";
-  const TABIT_DARK = "#1a1a2e";
   return (
     <div className="rounded-2xl p-4 transition-all duration-300" style={{
       backgroundColor: "rgba(255,255,255,0.03)",
@@ -357,21 +365,12 @@ function DemoCard({ icon, label, active, done, children, onAction, actionLabel }
           {done ? <CheckCircle2 className="w-3.5 h-3.5" /> : icon}
         </div>
         <span className="text-xs font-semibold" style={{ color: done ? "#22c55e" : active ? TABIT_TEAL : "rgba(255,255,255,0.5)" }}>{label}</span>
-        {active && !onAction && (
+        {active && (
           <div className="mr-auto flex gap-1">
             {[0, 1, 2].map(i => (
               <div key={i} className="w-1.5 h-1.5 rounded-full animate-bounce" style={{ backgroundColor: TABIT_TEAL, animationDelay: `${i * 0.15}s` }} />
             ))}
           </div>
-        )}
-        {onAction && (
-          <button
-            onClick={onAction}
-            className="mr-auto text-xs font-bold px-3 py-1 rounded-lg hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: TABIT_TEAL, color: TABIT_DARK }}
-          >
-            {actionLabel}
-          </button>
         )}
       </div>
       {children}
