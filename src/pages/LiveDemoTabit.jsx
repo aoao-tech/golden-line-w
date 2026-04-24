@@ -154,7 +154,7 @@ export default function LiveDemoTabit() {
                   {displayedText}
                 </div>
                 <div className="flex items-center justify-between mt-2 text-[10px]" style={{ color: "rgba(255,255,255,0.3)" }}>
-                  <span>📋 Tabit CRM</span>
+                  <span>📋 CRM של המסעדה</span>
                   <span>24/04/2026 · 13:47</span>
                 </div>
                 {step === "p1_ticket" && (
