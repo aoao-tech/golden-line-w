@@ -106,7 +106,6 @@ export default function LiveDemoTaamApri() {
               className="h-16 object-contain"
             />
             <div>
-              <div className="text-xl font-black" style={{ color: GREEN_DARK }}>טעם הפרי והירק</div>
               <div className="text-xs font-medium" style={{ color: GREEN }}>פירות וירקות · משלוח עד הבית</div>
             </div>
           </div>
