@@ -290,7 +290,7 @@ export default function LiveDemoTabit() {
                   )}
                   {["p2_triggering", "p2_injected"].includes(step) && (
                     <div className="flex items-center gap-2 text-xs font-medium px-3 py-2 rounded-lg" style={{ backgroundColor: "rgba(234,179,8,0.1)", border: "1px solid rgba(234,179,8,0.3)", color: "#fbbf24" }}>
-                      לקוח מיוחד זוהה! מזריק Golden Line לתחנת הארז...
+                      התאמה נמצאה — מכניס Golden Line לתחנת האריזה
                     </div>
                   )}
                 </DemoCard>
