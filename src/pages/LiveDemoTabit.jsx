@@ -5,7 +5,7 @@ import { base44 } from "@/api/base44Client";
 const DEMO = {
   customer: { name: "אורי לוי", id: "CUST-8821", phone: "053-7741882" },
   ticket_id: "ZD-91233",
-  complaint: "היי, קיבלתי את ההזמנה מזוזובra ממש מאוכזב. הסלמון הגיע קר לגמרי — ממש לא חם. ה-Gyoza הייתה ספוגה בשמן וכמעט בלתי אכילה. ציפיתי לאיכות הרבה יותר גבוהה ממסעדה ברמה כזו. אני רוצה החזר.",
+  complaint: "היי, קיבלתי את ההזמנה מ-KYOTO ממש מאוכזב. הסלמון הגיע קר לגמרי — ממש לא חם. ה-Gyoza הייתה ספוגה בשמן וכמעט בלתי אכילה. ציפיתי לאיכות הרבה יותר גבוהה ממסעדה ברמה כזו. אני רוצה החזר.",
   analysis: {
     action_code: "COLD_DISH",
     golden_line: "לוודא שהסלמון יוצא מהמחבת ישירות לאריזה, ו-Gyoza נמצאת על נייר סופג שמן לפני סגירת המכל",
@@ -106,9 +106,13 @@ export default function LiveDemoTabit() {
 
         <div className="relative z-10 flex items-end justify-between px-8 py-6" style={{ minHeight: "180px" }}>
           <div>
-            {/* ZOZOBRA logo style */}
-            <div className="text-5xl font-black tracking-widest uppercase mb-1" style={{ color: TABIT_TEAL, fontStyle: "italic", letterSpacing: "0.12em" }}>
-              ZOZOBRA
+            <div className="flex items-center gap-2 mb-1">
+              <div className="text-5xl font-black tracking-widest uppercase" style={{ color: TABIT_TEAL, fontStyle: "italic", letterSpacing: "0.12em" }}>
+                KYOTO
+              </div>
+              <div className="text-xs font-bold px-2 py-1 rounded" style={{ backgroundColor: "rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.2)" }}>
+                powered by Tabit
+              </div>
             </div>
             <p className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.55)" }}>מסעדת יפנית · תל אביב</p>
           </div>
@@ -308,8 +312,11 @@ export default function LiveDemoTabit() {
                     {/* Tabit-style screen mockup */}
                     <div className="rounded-2xl p-5 shadow-2xl" style={{ backgroundColor: "#0d0d1a", border: `1.5px solid ${TABIT_TEAL_BORDER}` }}>
                       <div className="flex items-center gap-2 mb-1">
-                        <div className="text-xs font-black tracking-widest uppercase italic" style={{ color: TABIT_TEAL }}>ZOZOBRA</div>
-                        <span className="text-[10px] ml-auto" style={{ color: "rgba(255,255,255,0.3)" }}>Tabit · תחנת אריזה</span>
+                        <div className="flex items-center gap-1.5">
+                          <div className="text-xs font-black tracking-widest uppercase italic" style={{ color: TABIT_TEAL }}>KYOTO</div>
+                          <span className="text-[9px] font-semibold" style={{ color: "rgba(255,255,255,0.35)" }}>via Tabit</span>
+                        </div>
+                        <span className="text-[10px] ml-auto" style={{ color: "rgba(255,255,255,0.3)" }}>תחנת אריזה</span>
                       </div>
                       <div className="border-b mb-3" style={{ borderColor: "rgba(255,255,255,0.06)" }} />
                       <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(234,179,8,0.1)", border: "2px solid rgba(234,179,8,0.5)" }}>
