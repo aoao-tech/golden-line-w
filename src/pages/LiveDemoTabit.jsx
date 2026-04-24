@@ -5,17 +5,17 @@ import { base44 } from "@/api/base44Client";
 const DEMO = {
   customer: { name: "אורי לוי", id: "CUST-8821", phone: "053-7741882" },
   ticket_id: "ZD-91233",
-  complaint: "היי, קיבלתי את ההזמנה מ-KYOTO ממש מאוכזב. הסלמון הגיע קר לגמרי — ממש לא חם. ה-Gyoza הייתה ספוגה בשמן וכמעט בלתי אכילה. ציפיתי לאיכות הרבה יותר גבוהה ממסעדה ברמה כזו. אני רוצה החזר.",
+  complaint: "הזמנתי מ-KYOTO וה-Gyoza הגיעה ספוגה בשמן וכמעט בלתי אכילה. גם הרול התפרק לחלוטין בשקית — לא הייתה שום הפרדה בין המנות ואחת מעכה את השנייה. אני מצפה לרמה הרבה יותר גבוהה.",
   analysis: {
-    action_code: "COLD_DISH",
-    golden_line: "לוודא שהסלמון יוצא מהמחבת ישירות לאריזה, ו-Gyoza נמצאת על נייר סופג שמן לפני סגירת המכל",
-    evidence: "הסלמון הגיע קר לגמרי — ממש לא חם. ה-Gyoza הייתה ספוגה בשמן וכמעט בלתי אכילה",
-    reasoning: "מנות חמות (סלמון ו-Gyoza) נארזו מוקדם מדי ולא ישירות לפני המשלוח — הסלמון הצטנן וה-Gyoza ספגה עודף שמן מהמחבת.",
-    confidence: 0.95,
+    action_code: "PACKING_QUALITY",
+    golden_line: "לשים את ה-Gyoza על נייר סופג שמן לפני סגירת המכל, ולארוז כל מנה במכל נפרד כדי למנוע מגע בין פריטים",
+    evidence: "ה-Gyoza הגיעה ספוגה בשמן, הרול התפרק בשקית ולא הייתה הפרדה בין המנות",
+    reasoning: "ה-Gyoza נארזה ללא נייר סופג שמן, והמנות השונות נארזו יחד ללא הפרדה מספקת — מה שגרם לנזק הדדי בין הפריטים.",
+    confidence: 0.96,
   },
   order: {
     id: "ORD-44821",
-    items: ["🐟 Salmon Teriyaki", "🥟 Gyoza (6 pcs)", "🍣 Tuna Roll (8 pcs)", "🥗 Edamame"],
+    items: ["🥟 Gyoza (6 pcs)", "🍣 Tuna Roll (8 pcs)", "🍱 Bento Box", "🥗 Edamame"],
   },
 };
 
@@ -186,7 +186,7 @@ export default function LiveDemoTabit() {
                   {step === "p1_analyzing" ? (
                     <div className="space-y-3">
                       <div className="flex items-center justify-between text-xs" style={{ color: "rgba(255,255,255,0.6)" }}>
-                        <span>מזהה בעיית חום/איכות...</span>
+                        <span>מזהה בעיית איכות אריזה...</span>
                         <span className="font-mono font-medium" style={{ color: TABIT_TEAL }}>{analyzeProgress}%</span>
                       </div>
                       <div className="w-full h-2 rounded-full overflow-hidden" style={{ backgroundColor: "rgba(255,255,255,0.08)" }}>
@@ -257,7 +257,7 @@ export default function LiveDemoTabit() {
                 <div className="flex flex-col items-center justify-center py-14 text-center rounded-2xl" style={{ border: `2px dashed ${TABIT_TEAL_BORDER}`, backgroundColor: "rgba(62,198,198,0.04)" }}>
                   <ShoppingCart className="w-10 h-10 mb-3" style={{ color: TABIT_TEAL_BORDER }} />
                   <p className="text-sm mb-1 font-medium text-white">{DEMO.customer.name} מבצע הזמנה חדשה</p>
-                  <p className="text-xs mb-5" style={{ color: "rgba(255,255,255,0.35)" }}>דרך Tabit · ZOZOBRA · אותן מנות</p>
+                  <p className="text-xs mb-5" style={{ color: "rgba(255,255,255,0.35)" }}>דרך Tabit · KYOTO · אותן מנות</p>
                   <button
                     onClick={startPhase2}
                     className="text-sm font-bold px-6 py-2.5 rounded-xl hover:opacity-90 transition-opacity"
