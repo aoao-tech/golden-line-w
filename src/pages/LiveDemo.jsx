@@ -303,7 +303,7 @@ export default function LiveDemo() {
                   <Badge className="ml-auto bg-emerald-100 text-emerald-700 border-emerald-200 shrink-0">LIVE</Badge>
                 </div>
                 <div className="bg-white border border-amber-300 rounded-lg p-4 shadow-sm">
-                  <div className="text-[10px] text-slate-400 uppercase tracking-widest mb-2 font-medium">📋 Chef's screen now shows:</div>
+                  <div className="text-[10px] text-slate-400 uppercase tracking-widest mb-2 font-medium">📋 Packer's screen now shows:</div>
                   <div className="text-xl font-bold text-slate-900 text-right leading-relaxed" dir="rtl">
                     {DEMO_SCENARIO.analysis.golden_line_hebrew}
                   </div>
