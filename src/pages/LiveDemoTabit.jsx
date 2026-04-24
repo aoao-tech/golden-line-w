@@ -69,7 +69,7 @@ export default function LiveDemoTabit() {
     try {
       const record = await base44.entities.OperationalDebts.create({
         customer_id: DEMO.customer.id,
-        restaurant_id: "zozobra-tabit",
+        restaurant_id: "kyoto-tabit",
         action_code: DEMO.analysis.action_code,
         golden_line_hebrew: DEMO.analysis.golden_line,
         reasoning_logic: DEMO.analysis.reasoning,
