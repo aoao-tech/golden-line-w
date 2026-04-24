@@ -316,7 +316,7 @@ export default function LiveDemoTaamApri() {
                   </div>
                   <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "rgba(74,138,58,0.25)", border: "1px solid rgba(74,138,58,0.5)" }}>
                     <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: "#86efac" }}>
-                      ✅ ההנחיה הופיעה כהודעה קופצת לארז לפני שהמנה יצאה — אותה טעות לא תחזור
+                      ✅ ההנחיה הופיעה כהודעה קופצת לאורז לפני שההזמנה יצאה — אותה טעות לא תחזור
                     </div>
                   </div>
                 </div>
