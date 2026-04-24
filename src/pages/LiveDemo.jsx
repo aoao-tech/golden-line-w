@@ -95,7 +95,7 @@ export default function LiveDemo() {
             <Zap className="w-5 h-5 text-amber-500" />
             <h1 className="text-2xl font-semibold text-slate-900 tracking-tight">Live Demo</h1>
           </div>
-          <p className="text-sm text-slate-500 ml-8">End-to-end Golden Line flow: from complaint to packer protection</p>
+          <p className="text-sm text-slate-500 ml-8">See how a customer complaint becomes a packing instruction before the next order ships</p>
         </div>
         <div className="flex gap-2">
           {step !== "p1_ticket" && (
