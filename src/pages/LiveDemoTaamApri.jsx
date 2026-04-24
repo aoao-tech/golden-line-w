@@ -100,16 +100,19 @@ export default function LiveDemoTaamApri() {
       <div className="mb-6">
         <div className="rounded-2xl overflow-hidden mb-3 flex items-center justify-between px-6 py-4 bg-white shadow-sm" style={{ border: `1.5px solid ${GREEN_BORDER}` }}>
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center text-3xl font-black" style={{ backgroundColor: GREEN_LIGHT, border: `2px solid ${GREEN_BORDER}` }}>
-              🍍
-            </div>
+            <img
+              src="https://media.base44.com/images/public/69b423f49e2a082212fdad99/671f8a096_media_19052021154619.png"
+              alt="טעם הפרי והירק"
+              className="h-16 object-contain"
+            />
             <div>
-              <div className="text-xl font-black" style={{ color: GREEN_DARK }}>טעם אפרי</div>
+              <div className="text-xl font-black" style={{ color: GREEN_DARK }}>טעם הפרי והירק</div>
               <div className="text-xs font-medium" style={{ color: GREEN }}>פירות וירקות · משלוח עד הבית</div>
             </div>
           </div>
           <div className="text-right">
             <p className="text-xs font-medium" style={{ color: GREEN }}>דמו Golden Line · taam-apri.co.il</p>
+
           </div>
         </div>
 
@@ -304,7 +307,7 @@ export default function LiveDemoTaamApri() {
                     <div className="w-2 h-2 rounded-full bg-red-500" />
                     <div className="w-2 h-2 rounded-full bg-yellow-400" />
                     <div className="w-2 h-2 rounded-full bg-green-400" />
-                    <span className="text-xs mr-2" style={{ color: "#666" }}>טעם אפרי — תחנת אריזה</span>
+                    <span className="text-xs mr-2" style={{ color: "#666" }}>טעם הפרי והירק — תחנת אריזה</span>
                   </div>
                   <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(245,200,66,0.15)", border: `2px solid ${YELLOW}` }}>
                     <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: YELLOW }}>⚠️ הנחיית Golden Line לארז</div>
@@ -331,11 +334,11 @@ export default function LiveDemoTaamApri() {
 
       {step === "idle" && (
         <div className="flex flex-col items-center justify-center py-12 text-center mt-4">
-          <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 bg-white shadow-sm" style={{ border: `2px solid ${GREEN_BORDER}` }}>
-            <span className="text-3xl">🍍</span>
+          <div className="mb-5">
+            <img src="https://media.base44.com/images/public/69b423f49e2a082212fdad99/671f8a096_media_19052021154619.png" alt="טעם הפרי והירק" className="h-16 object-contain" />
           </div>
           <p className="text-slate-600 text-sm max-w-sm leading-relaxed">
-            לחץ על <strong>הפעל דמו</strong> כדי לראות את הזרימה המלאה — מתלונת CRM ועד הנחיית אריזה בזמן אמת עבור <strong>טעם אפרי</strong>.
+            לחץ על <strong>הפעל דמו</strong> כדי לראות את הזרימה המלאה — מתלונת CRM ועד הנחיית אריזה בזמן אמת עבור <strong>טעם הפרי והירק</strong>.
           </p>
         </div>
       )}
