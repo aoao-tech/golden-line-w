@@ -26,8 +26,8 @@ const TABIT_TEAL_LIGHT = "rgba(62,198,198,0.12)";
 const TABIT_TEAL_BORDER = "rgba(62,198,198,0.4)";
 
 export default function LiveDemoTabit() {
-  const [step, setStep] = useState("idle");
-  const [displayedText, setDisplayedText] = useState("");
+  const [step, setStep] = useState("p1_ticket");
+  const [displayedText, setDisplayedText] = useState(DEMO.complaint);
   const [analyzeProgress, setAnalyzeProgress] = useState(0);
   const [savedDebtId, setSavedDebtId] = useState(null);
   const intervalRef = useRef(null);
@@ -42,8 +42,8 @@ export default function LiveDemoTabit() {
 
   const reset = () => {
     clearInterval(intervalRef.current);
-    setStep("idle");
-    setDisplayedText("");
+    setStep("p1_ticket");
+    setDisplayedText(DEMO.complaint);
     setAnalyzeProgress(0);
     setSavedDebtId(null);
   };
@@ -137,36 +137,15 @@ export default function LiveDemoTabit() {
       {/* Content */}
       <div className="px-6 py-8 max-w-5xl mx-auto">
 
-        {/* Start button */}
-        {step === "idle" && (
-          <div className="flex flex-col items-center justify-center py-14 text-center">
-            <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 relative" style={{ backgroundColor: TABIT_TEAL_LIGHT, border: `2px solid ${TABIT_TEAL_BORDER}` }}>
-              <Play className="w-8 h-8" style={{ color: TABIT_TEAL }} />
-            </div>
-            <h2 className="text-xl font-bold text-white mb-2">הפעל את הדמו</h2>
-            <p className="text-sm mb-8 max-w-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
-              ראה איך תלונת לקוח מ-Tabit הופכת להנחיית אריזה — לפני שהמנה הבאה יוצאת מהמטבח
-            </p>
-            <button
-              onClick={startPhase1}
-              className="text-sm font-bold px-10 py-3 rounded-xl hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: TABIT_TEAL, color: TABIT_DARK }}
-            >
-              הפעל דמו
-            </button>
-          </div>
-        )}
-
         {/* Two columns */}
-        {step !== "idle" && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
             {/* ── PHASE 1 ── */}
             <div className="space-y-4">
               <PhaseHeader number="1" title="זיהוי תלונה ולמידה" subtitle="תלונת Tabit ← ניתוח AI ← Golden Line נשמר" active={inPhase1} done={phase1Done} />
 
               {/* Step 1a — Ticket */}
-              <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — Tabit CRM" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)}>
+              <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — Tabit CRM" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)} onAction={step === "p1_ticket" ? runAnalysis : null} actionLabel="נתח תלונה">
                 <div className="flex items-center gap-2 mb-3 flex-wrap text-xs">
                   <span className="font-medium px-2 py-1 rounded-lg" style={{ backgroundColor: TABIT_TEAL_LIGHT, border: `1px solid ${TABIT_TEAL_BORDER}`, color: TABIT_TEAL }}>👤 {DEMO.customer.name}</span>
                   <span className="font-mono px-2 py-1 rounded-lg" style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.4)", border: "1px solid rgba(255,255,255,0.1)" }}>{DEMO.ticket_id}</span>
@@ -335,8 +314,7 @@ export default function LiveDemoTabit() {
                 </DemoCard>
               )}
             </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
@@ -360,10 +338,11 @@ function PhaseHeader({ number, title, subtitle, active, done, locked }) {
   );
 }
 
-function DemoCard({ icon, label, active, done, children }) {
+function DemoCard({ icon, label, active, done, children, onAction, actionLabel }) {
   const TABIT_TEAL = "#3ec6c6";
   const TABIT_TEAL_LIGHT = "rgba(62,198,198,0.12)";
   const TABIT_TEAL_BORDER = "rgba(62,198,198,0.4)";
+  const TABIT_DARK = "#1a1a2e";
   return (
     <div className="rounded-2xl p-4 transition-all duration-300" style={{
       backgroundColor: "rgba(255,255,255,0.03)",
@@ -378,12 +357,21 @@ function DemoCard({ icon, label, active, done, children }) {
           {done ? <CheckCircle2 className="w-3.5 h-3.5" /> : icon}
         </div>
         <span className="text-xs font-semibold" style={{ color: done ? "#22c55e" : active ? TABIT_TEAL : "rgba(255,255,255,0.5)" }}>{label}</span>
-        {active && (
+        {active && !onAction && (
           <div className="mr-auto flex gap-1">
             {[0, 1, 2].map(i => (
               <div key={i} className="w-1.5 h-1.5 rounded-full animate-bounce" style={{ backgroundColor: TABIT_TEAL, animationDelay: `${i * 0.15}s` }} />
             ))}
           </div>
+        )}
+        {onAction && (
+          <button
+            onClick={onAction}
+            className="mr-auto text-xs font-bold px-3 py-1 rounded-lg hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: TABIT_TEAL, color: TABIT_DARK }}
+          >
+            {actionLabel}
+          </button>
         )}
       </div>
       {children}
