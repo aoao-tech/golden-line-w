@@ -83,11 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="text-center py-8 border-t border-slate-100 bg-white">
-        <p className="text-sm font-semibold text-slate-900 mb-1">Golden Line</p>
-        <p className="text-xs text-slate-400">© 2026</p>
-      </footer>
+
 
     </div>
   );
