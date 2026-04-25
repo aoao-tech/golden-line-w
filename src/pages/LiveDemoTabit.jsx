@@ -145,7 +145,7 @@ export default function LiveDemoTabit() {
               <PhaseHeader number="1" title="זיהוי תלונה ולמידה" subtitle="תלונת Tabit ← ניתוח AI ← Golden Line נשמר" active={inPhase1} done={phase1Done} />
 
               {/* Step 1a — Ticket */}
-              <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — Tabit CRM" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)}>
+              <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — CRM של המסעדה" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)}>
                 <div className="flex items-center gap-2 mb-3 flex-wrap text-xs">
                   <span className="font-medium px-2 py-1 rounded-lg" style={{ backgroundColor: TABIT_TEAL_LIGHT, border: `1px solid ${TABIT_TEAL_BORDER}`, color: TABIT_TEAL }}>👤 {DEMO.customer.name}</span>
                   <span className="font-mono px-2 py-1 rounded-lg" style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.4)", border: "1px solid rgba(255,255,255,0.1)" }}>{DEMO.ticket_id}</span>
