@@ -308,7 +308,7 @@ export default function LiveDemoTabit() {
                       </div>
                       <div className="border-b mb-3" style={{ borderColor: "rgba(255,255,255,0.06)" }} />
                       <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(234,179,8,0.1)", border: "2px solid rgba(234,179,8,0.5)" }}>
-                        <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#fbbf24" }}>⚠️ הנחיית Golden Line לארז</div>
+                        <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#fbbf24" }}>⚠️ הנחיית Golden Line לאורז</div>
                         <div className="text-white text-base font-bold text-right leading-snug">
                           {DEMO.analysis.golden_line}
                         </div>
