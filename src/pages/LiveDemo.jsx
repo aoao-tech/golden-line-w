@@ -137,7 +137,7 @@ export default function LiveDemo() {
           >
             <div className="flex items-center gap-2 mb-3 text-xs text-slate-500">
               <span className="font-mono bg-slate-100 px-2 py-1 rounded">Ticket: {DEMO_SCENARIO.ticket_id}</span>
-              <span className="font-mono bg-slate-100 px-2 py-1 rounded">Customer: {DEMO_SCENARIO.customer_id}</span>
+              <span className="font-mono bg-amber-100 text-amber-800 border border-amber-300 px-2 py-1 rounded font-semibold">👤 Customer: {DEMO_SCENARIO.customer_id}</span>
               <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 font-normal text-[10px]">Closed</Badge>
             </div>
             <div className="bg-white rounded-lg border border-slate-200 p-3 text-sm text-slate-700 leading-relaxed min-h-[80px]">
