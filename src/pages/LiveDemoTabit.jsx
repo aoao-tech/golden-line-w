@@ -5,7 +5,7 @@ import { base44 } from "@/api/base44Client";
 const DEMO = {
   customer: { name: "אורי לוי", id: "CUST-8821", phone: "053-7741882" },
   ticket_id: "ZD-91233",
-  complaint: "הזמנתי אדממה וקיבלתי אותה קרה לחלוטין. לא ניתן היה ליהנות ממנה כלל.",
+  complaint: "הזמנתי אדממה וקיבלתי אותו קר לחלוטין. אני דורש החזר כספי מיידי!",
   analysis: {
     action_code: "EDAMAME_COLD_PACKING",
     golden_line: "לארוז אדממה בשקית מבודדת חום, בנפרד מהמנות הקרות",
