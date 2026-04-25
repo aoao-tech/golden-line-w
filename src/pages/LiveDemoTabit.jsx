@@ -315,7 +315,7 @@ export default function LiveDemoTabit() {
                       </div>
                       <div className="rounded-lg px-4 py-3" style={{ backgroundColor: TABIT_TEAL_LIGHT, border: `1px solid ${TABIT_TEAL_BORDER}` }}>
                         <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: TABIT_TEAL }}>
-                          ✅ ההנחיה הופיעה על מסך הארז ב-Tabit לפני שהמנה יצאה — אותה טעות לא תחזור
+                          ✅ ההנחיה תופיע כהערה למנה אדממה במסך האורז ב-Tabit לפני שהמנה תצא
                         </div>
                       </div>
                     </div>
