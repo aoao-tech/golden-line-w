@@ -11,7 +11,7 @@ const DEMO_SCENARIO = {
   complaint: "Hi, I just received my order and it's a total mess. The soup container was completely open and spilled all over the bag — everything is soaking wet. The fries are soggy and the burger bun is falling apart. I can't even eat this. This is unacceptable, I want a full refund.",
   analysis: {
     action_code: "SPILL",
-    golden_line_hebrew: "לאטום את המכסה של המרק עם מכסה כפול",
+    golden_line_hebrew: "Seal the soup container with a double lid before placing in the bag",
     reasoning_logic: "Soup container was not properly sealed before delivery, causing liquid to spill and damage other food items.",
     evidence_quote: "The soup container was completely open and spilled all over the bag — everything is soaking wet.",
     confidence_score: 0.97,
@@ -118,7 +118,7 @@ export default function LiveDemo() {
           <PhaseHeader
             number="1"
             title="Ticket Analysis & Learning"
-            subtitle="Closed CRM ticket → AI analysis → Golden Line stored"
+            subtitle="Closed CRM ticket, AI analysis, Golden Line stored"
             active={inPhase1}
             done={phase1Done}
           />
@@ -185,7 +185,7 @@ export default function LiveDemo() {
                     <div className="text-xs bg-amber-50 border border-amber-200 px-3 py-2 rounded text-slate-700 italic">"{DEMO_SCENARIO.analysis.evidence_quote}"</div>
                   </ResultField>
                   <ResultField label="🍳 Golden Line">
-                    <div className="text-sm font-semibold bg-amber-500/10 border border-amber-400/30 text-amber-900 px-3 py-2.5 rounded-lg text-right" dir="rtl">
+                    <div className="text-sm font-semibold bg-amber-500/10 border border-amber-400/30 text-amber-900 px-3 py-2.5 rounded-lg">
                       {DEMO_SCENARIO.analysis.golden_line_hebrew}
                     </div>
                   </ResultField>
@@ -226,7 +226,7 @@ export default function LiveDemo() {
           <PhaseHeader
             number="2"
             title="Next Order Protection"
-            subtitle="Same customer reorders → Golden Line injected to kitchen"
+            subtitle="Same customer reorders, Golden Line injected to kitchen"
             active={inPhase2}
             done={phase2Done}
             locked={!phase1Done}
@@ -304,7 +304,7 @@ export default function LiveDemo() {
                 </div>
                 <div className="bg-white border border-amber-300 rounded-lg p-4 shadow-sm">
                   <div className="text-[10px] text-slate-400 uppercase tracking-widest mb-2 font-medium">📋 Packer's screen now shows:</div>
-                  <div className="text-xl font-bold text-slate-900 text-right leading-relaxed" dir="rtl">
+                  <div className="text-xl font-bold text-slate-900 leading-relaxed">
                     {DEMO_SCENARIO.analysis.golden_line_hebrew}
                   </div>
                 </div>
