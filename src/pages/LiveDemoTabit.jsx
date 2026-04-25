@@ -5,17 +5,17 @@ import { base44 } from "@/api/base44Client";
 const DEMO = {
   customer: { name: "אורי לוי", id: "CUST-8821", phone: "053-7741882" },
   ticket_id: "ZD-91233",
-  complaint: "ה-Gyoza הגיעה ספוגה בשמן — הבצק היה רטוב ודייסתי. לא ניתן לאכול.",
+  complaint: "הזמנתי אדממה וקיבלתי אותה קרה לחלוטין. לא ניתן היה ליהנות ממנה כלל.",
   analysis: {
-    action_code: "GYOZA_OIL_ABSORB",
-    golden_line: "לשים נייר סופג שמן מתחת ל-Gyoza לפני סגירת המכל",
-    evidence: "ה-Gyoza הגיעה ספוגה בשמן וכמעט בלתי אכילה",
-    reasoning: "ה-Gyoza נארזה ללא נייר סופג שמן — השמן הצטבר בתחתית המכל וספג חזרה לתוך הבצק.",
-    confidence: 0.96,
+    action_code: "EDAMAME_COLD_PACKING",
+    golden_line: "לארוז אדממה בשקית מבודדת חום, בנפרד מהמנות הקרות",
+    evidence: "האדממה הגיעה קרה לחלוטין כי נארזה ליד מנות קרות",
+    reasoning: "האדממה נארזה בסמיכות למנות קרות (סשימי/רולים) ואיבדה את חומה עד להגעה ללקוח.",
+    confidence: 0.94,
   },
   order: {
     id: "ORD-44821",
-    items: ["🥟 Gyoza (6 pcs)", "🍣 Tuna Roll (8 pcs)", "🍱 Bento Box", "🥗 Edamame"],
+    items: ["🫛 אדממה", "🍣 Tuna Roll (8 pcs)", "🍱 Bento Box", "🐟 Salmon Sashimi"],
   },
 };
 
