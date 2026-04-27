@@ -319,7 +319,7 @@ export default function LiveDemoPopIsrael() {
             <span className="absolute -bottom-2 -left-2 text-lg">🍅</span>
           </div>
           <p className="text-slate-600 text-sm max-w-sm leading-relaxed">
-            לחץ על <strong>הפעל דמו</strong> כדי לראות את הזרימה המלאה — מתלונת CRM ועד הנחיית אריזה בזמן אמת עבור <strong>פופ ישראל</strong>.
+            לחץ על <strong>הפעל דמו</strong> כדי לראות את הזרימה המלאה — מתלונת CRM ועד הנחיית אריזה בזמן אמת עבור <strong>פופ</strong>.
           </p>
         </div>
       )}
