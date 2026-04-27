@@ -297,8 +297,8 @@ export default function LiveDemoPopIsrael() {
                     <div className="w-2 h-2 rounded-full bg-green-400" />
                     <span className="text-xs mr-2" style={{ color: "#666" }}>mypips — תחנת אריזה · פופ ישראל</span>
                   </div>
-                  <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(217,119,6,0.15)", border: "2px solid #d97706" }}>
-                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#fbbf24" }}>⚠️ הנחיית Golden Line לארז</div>
+                  <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(46,125,50,0.12)", border: "2px solid rgba(46,125,50,0.45)" }}>
+                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#a5d6a7" }}>⚠️ הנחיית Golden Line לאורז</div>
                     <div className="text-white text-lg font-bold text-right leading-snug">
                       {DEMO.analysis.golden_line}
                     </div>
