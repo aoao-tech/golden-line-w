@@ -183,7 +183,7 @@ export default function LiveDemoPopIsrael() {
                 <div className="space-y-3">
                   <div className="grid grid-cols-2 gap-3">
                     <ResultField label="קוד פעולה">
-                      <code className="text-xs px-2 py-1 rounded font-mono block" style={{ backgroundColor: "#fff3f0", color: "#c0392b", border: "1px solid #fca5a5" }}>{DEMO.analysis.action_code}</code>
+                      <code className="text-xs px-2 py-1 rounded font-mono block uppercase" style={{ backgroundColor: "#fff3f0", color: "#c0392b", border: "1px solid #fca5a5" }}>{DEMO.analysis.action_code}</code>
                     </ResultField>
                     <ResultField label="ביטחון AI">
                       <div className="flex items-center gap-2">
