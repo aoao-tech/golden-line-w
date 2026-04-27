@@ -293,7 +293,7 @@ export default function LiveDemoPopIsrael() {
 
                 <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: "#f0faf0", border: `1.5px solid ${POP_GREEN_BORDER}` }}>
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="text-xs font-medium" style={{ color: POP_GREEN }}>mypips — תחנת אריזה · פופ ישראל</span>
+                    <span className="text-xs font-bold uppercase tracking-widest" style={{ color: POP_GREEN }}>mypips — תחנת אריזה · POP</span>
                   </div>
                   <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "white", border: `2px solid ${POP_GREEN_BORDER}` }}>
                     <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: POP_GREEN }}>⚠️ הנחיית Golden Line לאורז</div>
