@@ -302,7 +302,7 @@ export default function LiveDemoPopIsrael() {
                   </div>
                   <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "#e8f5e9", border: `1px solid ${POP_GREEN_BORDER}` }}>
                     <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: POP_GREEN_DARK }}>
-                      ✅ האורז קיבל את ההנחיה כהודעה קופצת כשנכנס לארוז ללקוחה, או בהערות תחת המוצר הרלוונטי בהזמנה
+                      ✅ האורז קיבל את ההנחיה כהודעה קופצת כשנכנס למסך אריזה ללקוח או בהערות תחת המוצר הרלוונטי בהזמנה
                     </div>
                   </div>
                 </div>
