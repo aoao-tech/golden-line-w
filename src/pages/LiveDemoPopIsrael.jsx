@@ -290,21 +290,18 @@ export default function LiveDemoPopIsrael() {
                   <span className="mr-auto text-[10px] font-bold px-2 py-0.5 rounded" style={{ backgroundColor: "#c8e6c9", color: POP_GREEN_DARK }}>LIVE</span>
                 </div>
 
-                <div className="rounded-2xl p-5 shadow-xl" style={{ backgroundColor: "#1a1a2e", border: "1px solid #333" }}>
+                <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: "#f0faf0", border: `1.5px solid ${POP_GREEN_BORDER}` }}>
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-2 h-2 rounded-full bg-red-500" />
-                    <div className="w-2 h-2 rounded-full bg-yellow-400" />
-                    <div className="w-2 h-2 rounded-full bg-green-400" />
-                    <span className="text-xs mr-2" style={{ color: "#666" }}>mypips — תחנת אריזה · פופ ישראל</span>
+                    <span className="text-xs font-medium" style={{ color: POP_GREEN }}>mypips — תחנת אריזה · פופ ישראל</span>
                   </div>
-                  <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(46,125,50,0.12)", border: "2px solid rgba(46,125,50,0.45)" }}>
-                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: "#a5d6a7" }}>⚠️ הנחיית Golden Line לאורז</div>
-                    <div className="text-white text-lg font-bold text-right leading-snug">
+                  <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "white", border: `2px solid ${POP_GREEN_BORDER}` }}>
+                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: POP_GREEN }}>⚠️ הנחיית Golden Line לאורז</div>
+                    <div className="text-lg font-bold text-right leading-snug" style={{ color: POP_GREEN_DARK }}>
                       {DEMO.analysis.golden_line}
                     </div>
                   </div>
-                  <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "rgba(46,125,50,0.3)", border: "1px solid rgba(74,140,74,0.5)" }}>
-                    <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: "#86efac" }}>
+                  <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "#e8f5e9", border: `1px solid ${POP_GREEN_BORDER}` }}>
+                    <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: POP_GREEN_DARK }}>
                       ✅ האורז קיבל את ההנחיה כהודעה קופצת כשנכנס לארוז ללקוחה, או בהערות תחת המוצר הרלוונטי בהזמנה
                     </div>
                   </div>
