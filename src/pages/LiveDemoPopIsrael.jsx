@@ -108,7 +108,7 @@ export default function LiveDemoPopIsrael() {
               alt="פופ לוגו"
               className="w-9 h-9 rounded-full object-cover border-2 border-white"
             />
-            <p className="text-xs font-medium" style={{ color: POP_GREEN_LIGHT }}>דמו Golden Line · מופעל על mypips.app</p>
+            <p className="text-xs font-medium" style={{ color: "#000000" }}>דמו Golden Line · מופעל על mypips.app</p>
           </div>
         </div>
         <div className="flex items-center justify-between">
