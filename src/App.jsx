@@ -16,6 +16,7 @@ import LiveDemoAlAlim from './pages/LiveDemoAlAlim';
 import LiveDemoTabit from './pages/LiveDemoTabit';
 import LiveDemoTaamApri from './pages/LiveDemoTaamApri';
 import LiveDemoPopIsrael from './pages/LiveDemoPopIsrael';
+import LiveDemoZanzuri from './pages/LiveDemoZanzuri';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -46,6 +47,7 @@ const AuthenticatedApp = () => {
       <Route path="/LiveDemoTabit" element={<LiveDemoTabit />} />
       <Route path="/LiveDemoTaamApri" element={<LiveDemoTaamApri />} />
       <Route path="/LiveDemoPopIsrael" element={<LiveDemoPopIsrael />} />
+      <Route path="/LiveDemoZanzuri" element={<LiveDemoZanzuri />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
