@@ -282,14 +282,7 @@ export default function LiveDemoPopIsrael() {
           {step === "p2_injected" && (
             <DemoCard icon={<ShoppingBag className="w-4 h-4" />} label="תחנת האריזה — מסך הארז" active={false} done={true}>
               <div className="space-y-3">
-                <div className="flex items-center gap-3 p-3 rounded-xl" style={{ backgroundColor: POP_GREEN_LIGHT, border: `1px solid ${POP_GREEN_BORDER}` }}>
-                  <CheckCircle2 className="w-5 h-5 shrink-0" style={{ color: POP_GREEN }} />
-                  <div className="text-right">
-                    <div className="font-semibold text-sm" style={{ color: POP_GREEN_DARK }}>Golden Line הוזרק לתחנת האריזה</div>
-                    <div className="text-xs mt-0.5" style={{ color: POP_GREEN }}>הזמנה {DEMO.order.id} · לפני תחילת אריזה</div>
-                  </div>
-                  <span className="mr-auto text-[10px] font-bold px-2 py-0.5 rounded" style={{ backgroundColor: "#c8e6c9", color: POP_GREEN_DARK }}>LIVE</span>
-                </div>
+
 
                 <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: "#f0faf0", border: `1.5px solid ${POP_GREEN_BORDER}` }}>
                   <div className="flex items-center gap-2 mb-4">
