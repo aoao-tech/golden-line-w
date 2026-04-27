@@ -8,7 +8,7 @@ const POP_GREEN_BORDER = "#a5d6a7";
 const POP_GREEN_DARK = "#1b5e20";
 
 const DEMO = {
-  customer: { name: "דפנה אמון", id: "CUST-5521", phone: "054-3312887" },
+  customer: { name: "מירה כהן", id: "CUST-5521", phone: "054-3312887" },
   complaint: "קיבלתי את הסל היום וממש אכזבה - התמרים הגיעו יבשים לחלוטין ולא לחים בכלל, והקלמנטינות היו רקובות.",
   analysis: {
     action_code: "DATE_CITRUS_QUALITY_CHECK",
