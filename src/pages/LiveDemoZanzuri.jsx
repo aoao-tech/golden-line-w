@@ -6,14 +6,12 @@ const GREEN = "#2e7d32";
 const GREEN_LIGHT = "#f1f8f1";
 const GREEN_BORDER = "#a5d6a7";
 const GREEN_DARK = "#1b5e20";
-const YELLOW = "#f9a825";
-const BG = "#f0f7f0";
 
 const DEMO = {
   customer: { name: "רונית לוי", id: "CUST-8812", phone: "052-4431287" },
   complaint: "הזמנתי עגבניות שרי וקיבלתי חצי מהן מרוסקות ורקובות — ממש לא מה שציפיתי. גם הפלפל הצהוב הגיע רך ומקומט לחלוטין. אכזבה גדולה.",
   analysis: {
-    action_code: "TOMATO_PEPPER_QUALITY",
+    action_code: "tomato_pepper_quality",
     golden_line: "לבדוק עגבניות שרי ופלפלים לפני אריזה — לא לשלוח פרי מרוסק, רקוב או מקומט",
     evidence: "חצי מהעגבניות שרי מרוסקות ורקובות, הפלפל הצהוב הגיע רך ומקומט לחלוטין",
     reasoning: "עגבניות שרי ופלפלים נארזו ללא בדיקת איכות — פירות שבורים ומקומטים יצאו ללקוח.",
@@ -93,25 +91,20 @@ export default function LiveDemoZanzuri() {
   };
 
   return (
-    <div className="min-h-screen p-5 md:p-8" style={{ backgroundColor: BG, direction: "rtl" }}>
+    <div className="min-h-screen p-5 md:p-8" style={{ backgroundColor: "#eaf4ea", direction: "rtl" }}>
 
       {/* Header */}
       <div className="mb-6">
-        <div className="rounded-2xl overflow-hidden mb-3 flex items-center justify-between px-6 py-4 bg-white shadow-sm" style={{ border: `1.5px solid ${GREEN_BORDER}` }}>
-          <div className="flex items-center gap-4">
-            <img
-              src="https://zanzuri.co.il/wp-content/uploads/2026/03/%D7%94%D7%90%D7%99%D7%9B%D7%A8-%D7%96%D7%A0%D7%96%D7%95%D7%A8%D7%99-%D7%97%D7%A7%D7%9C%D7%90%D7%95%D7%AA-%D7%99%D7%A9%D7%99%D7%A8%D7%94.png"
-              alt="האיכר זנזורי"
-              className="h-14 object-contain"
-              onError={(e) => { e.target.style.display = 'none'; }}
-            />
-            <div>
-              <div className="text-base font-bold" style={{ color: GREEN_DARK }}>האיכר זנזורי</div>
-              <div className="text-xs" style={{ color: GREEN }}>פירות וירקות מהחקלאי עד הבית</div>
-            </div>
-          </div>
-          <div className="text-right">
-            <p className="text-xs font-medium" style={{ color: GREEN }}>דמו Golden Line · zanzuri.co.il</p>
+        <div className="relative rounded-2xl overflow-hidden mb-3" style={{ height: "130px" }}>
+          <img
+            src="https://zanzuri.co.il/wp-content/uploads/2026/03/%D7%94%D7%90%D7%99%D7%9B%D7%A8-%D7%96%D7%A0%D7%96%D7%95%D7%A8%D7%99-%D7%97%D7%A7%D7%9C%D7%90%D7%95%D7%AA-%D7%99%D7%A9%D7%99%D7%A8%D7%94.png"
+            alt="האיכר זנזורי"
+            className="w-full h-full object-cover object-center"
+            onError={(e) => { e.target.style.backgroundColor = '#2e7d32'; e.target.style.display = 'block'; }}
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to left, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)" }} />
+          <div className="absolute bottom-3 left-4 flex items-center gap-2">
+            <p className="text-xs font-medium" style={{ color: "#ffffff" }}>דמו Golden Line · zanzuri.co.il</p>
           </div>
         </div>
         <div className="flex items-center justify-between">
@@ -119,8 +112,7 @@ export default function LiveDemoZanzuri() {
           {step !== "idle" && (
             <button
               onClick={reset}
-              className="flex items-center gap-1.5 text-sm font-medium border rounded-lg px-3 py-2 bg-white hover:bg-slate-50"
-              style={{ color: "#555", borderColor: "#ccc" }}
+              className="flex items-center gap-1.5 text-sm font-medium text-slate-600 border border-slate-300 rounded-lg px-3 py-2 bg-white hover:bg-slate-50"
             >
               <RotateCcw className="w-3.5 h-3.5" /> אתחול
             </button>
@@ -158,7 +150,7 @@ export default function LiveDemoZanzuri() {
             </div>
             <div className="flex items-center justify-between mt-2 text-[10px] text-slate-400">
               <span>📋 CRM · הגיע ל-CS</span>
-              <span>27/04/2026 · 09:41</span>
+              <span>27/04/2026 · 11:14</span>
             </div>
           </DemoCard>
 
@@ -167,7 +159,7 @@ export default function LiveDemoZanzuri() {
               {step === "p1_analyzing" ? (
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-slate-600">
-                    <span>מזהה בעיית איכות ירקות...</span>
+                    <span>מזהה בעיית טריות ירקות...</span>
                     <span className="font-mono font-medium" style={{ color: GREEN }}>{analyzeProgress}%</span>
                   </div>
                   <div className="w-full h-2 rounded-full overflow-hidden" style={{ backgroundColor: "#c8e6c9" }}>
@@ -203,7 +195,7 @@ export default function LiveDemoZanzuri() {
                       "{DEMO.analysis.evidence}"
                     </div>
                   </ResultField>
-                  <ResultField label="🥦 Golden Line — הנחיית אריזה">
+                  <ResultField label="🍅 Golden Line — הנחיית אריזה">
                     <div className="text-sm font-bold px-3 py-3 rounded-xl text-right leading-relaxed" style={{ backgroundColor: GREEN_LIGHT, border: `1px solid ${GREEN_BORDER}`, color: GREEN_DARK }}>
                       {DEMO.analysis.golden_line}
                     </div>
@@ -298,7 +290,7 @@ export default function LiveDemoZanzuri() {
                   </div>
                   <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "#e8f5e9", border: `1px solid ${GREEN_BORDER}` }}>
                     <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: GREEN_DARK }}>
-                      ✅ האורז קיבל את ההנחיה כהודעה קופצת כשנכנס למסך אריזה ללקוחה, או בהערות תחת המוצר הרלוונטי בהזמנה
+                      ✅ האורז קיבל את ההנחיה כהודעה קופצת כשנכנס למסך אריזה ללקוח או בהערות תחת המוצר הרלוונטי בהזמנה
                     </div>
                   </div>
                 </div>
