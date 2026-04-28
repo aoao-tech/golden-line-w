@@ -313,7 +313,7 @@ export default function LiveDemoTaamApri() {
                   </div>
                   <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "#e8f5e9", border: `1px solid ${GREEN_BORDER}` }}>
                     <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: GREEN_DARK }}>
-                      ✅ האורז קיבל את ההנחיה כהודעה קופצת כשנכנס למסך אריזה ללקוחה, או בהערות תחת המוצר הרלוונטי בהזמנה
+                      ✅ ההנחיה תופיע בהודעה קופצת לאורז, או כהערה מתחת למוצר הרלוונטי בהזמנה
                     </div>
                   </div>
                 </div>
