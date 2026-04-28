@@ -301,21 +301,18 @@ export default function LiveDemoTaamApri() {
                 </div>
 
                 {/* Packing screen mockup */}
-                <div className="rounded-2xl p-5 shadow-xl" style={{ backgroundColor: "#1a1a2e", border: "1px solid #333" }}>
+                <div className="rounded-2xl p-5 shadow-sm" style={{ backgroundColor: GREEN_LIGHT, border: `1.5px solid ${GREEN_BORDER}` }}>
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-2 h-2 rounded-full bg-red-500" />
-                    <div className="w-2 h-2 rounded-full bg-yellow-400" />
-                    <div className="w-2 h-2 rounded-full bg-green-400" />
-                    <span className="text-xs mr-2" style={{ color: "#666" }}>טעם הפרי והירק — תחנת אריזה</span>
+                    <span className="text-xs font-bold uppercase tracking-widest" style={{ color: GREEN }}>טעם הפרי והירק — תחנת אריזה</span>
                   </div>
-                  <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "rgba(245,200,66,0.15)", border: `2px solid ${YELLOW}` }}>
-                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: YELLOW }}>⚠️ הנחיית Golden Line לארז</div>
-                    <div className="text-white text-lg font-bold text-right leading-snug">
+                  <div className="rounded-xl p-4 mb-3" style={{ backgroundColor: "white", border: `2px solid ${GREEN_BORDER}` }}>
+                    <div className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: GREEN }}>⚠️ הנחיית Golden Line לאורז</div>
+                    <div className="text-lg font-bold text-right leading-snug" style={{ color: GREEN_DARK }}>
                       {DEMO.analysis.golden_line}
                     </div>
                   </div>
-                  <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "rgba(74,138,58,0.25)", border: "1px solid rgba(74,138,58,0.5)" }}>
-                    <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: "#86efac" }}>
+                  <div className="rounded-lg px-4 py-3" style={{ backgroundColor: "#e8f5e9", border: `1px solid ${GREEN_BORDER}` }}>
+                    <div className="text-sm font-semibold text-right leading-relaxed" style={{ color: GREEN_DARK }}>
                       ✅ ההנחיה הופיעה כהודעה קופצת לאורז לפני שההזמנה יצאה — אותה טעות לא תחזור
                     </div>
                   </div>
