@@ -3,18 +3,18 @@ import { Play, RotateCcw, ShoppingBag, MessageSquare, Brain, CheckCircle2, Datab
 import { base44 } from "@/api/base44Client";
 
 const DEMO = {
-  customer: { name: "דנה אברהם", id: "CUST-3317", phone: "050-6612984" },
-  complaint: "הזמנתי אבוקדו האס וקיבלתי פרי שחור ורקוב לגמרי — שלושה מתוך ארבעה היו מקולקלים לחלוטין ולא ניתן היה לאכול אותם. ממש לא מה שציפיתי.",
+  customer: { name: "מירה כהן", id: "CUST-4412", phone: "052-8834421" },
+  complaint: "קיבלתי את ההזמנה היום דרך וולט וממש אכזבה — הקלמנטינות הגיעו רקובות לחלוטין, חלקן עם עובש. ציפיתי לאיכות הרבה יותר גבוהה.",
   analysis: {
-    action_code: "AVOCADO_QUALITY_CHECK",
-    golden_line: "לבדוק כל אבוקדו בלחיצה לפני אריזה — לא לשלוח פרי שחור או רך מדי",
-    evidence: "שלושה מתוך ארבעה אבוקדו היו שחורים ורקובים לגמרי",
-    reasoning: "אבוקדו נארז ללא בדיקת בשלות — פרי ברמה 5 (שחור) נשלח ללקוח במקום רמה 3-4 (ירוק-שחור).",
-    confidence: 0.95,
+    action_code: "fruit_quality",
+    golden_line: "לוודא שקלמנטינות ללא פגמים ורקבון לפני אריזה",
+    evidence: "הקלמנטינות הגיעו רקובות לחלוטין, חלקן עם עובש",
+    reasoning: "קלמנטינות נארזו ללא בדיקת איכות — חלקן הגיעו רקובות ועם עובש ללקוחה.",
+    confidence: 0.96,
   },
   order: {
-    id: "ORD-62417",
-    items: ["🥑 אבוקדו האס (4 יח')", "🍊 קלמנטינות (1 ק\"ג)", "🍓 תות שדה מובחר", "🥦 ברוקולי טרי", "🍋 לימון ליים"],
+    id: "ORD-62418",
+    items: ["🍊 קלמנטינות (1 ק\"ג)", "🥑 אבוקדו האס", "🍓 תות שדה מובחר", "🥦 ברוקולי טרי", "🍋 לימון"],
   },
 };
 
@@ -150,7 +150,7 @@ export default function LiveDemoTaamApri() {
           <PhaseHeader number="1" title="זיהוי תלונה ולמידה" subtitle="תלונת לקוח ← ניתוח AI ← Golden Line נשמר" active={inPhase1} done={phase1Done} />
 
           {/* Step 1a — Complaint */}
-          <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — CRM של החנות" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)}>
+          <DemoCard icon={<MessageSquare className="w-4 h-4" />} label="תלונת לקוח — Wolt CRM" active={step === "p1_ticket"} done={["p1_analyzing", "p1_stored", ...PHASE2].includes(step)}>
             <div className="flex items-center gap-2 mb-3 flex-wrap text-xs">
               <span className="font-medium px-2 py-1 rounded-lg border" style={{ backgroundColor: GREEN_LIGHT, borderColor: GREEN_BORDER, color: GREEN_DARK }}>👤 {DEMO.customer.name}</span>
               <span className="font-mono px-2 py-1 rounded-lg bg-orange-100 text-orange-700 border border-orange-200">{DEMO.customer.id}</span>
@@ -159,7 +159,7 @@ export default function LiveDemoTaamApri() {
               {step === "idle" ? DEMO.complaint : displayedText}
             </div>
             <div className="flex items-center justify-between mt-2 text-[10px] text-slate-400">
-              <span>📋 CRM של החנות</span>
+              <span>📋 Wolt CRM · הגיע ל-CS</span>
               <span>24/04/2026 · 10:18</span>
             </div>
           </DemoCard>
@@ -206,7 +206,7 @@ export default function LiveDemoTaamApri() {
                       "{DEMO.analysis.evidence}"
                     </div>
                   </ResultField>
-                  <ResultField label="🥑 Golden Line — הנחיית אריזה">
+                  <ResultField label="🍊 Golden Line — הנחיית אריזה">
                     <div className="text-sm font-bold px-3 py-3 rounded-xl text-right leading-relaxed" style={{ backgroundColor: GREEN_LIGHT, border: `1px solid ${GREEN_BORDER}`, color: GREEN_DARK }}>
                       {DEMO.analysis.golden_line}
                     </div>
@@ -343,7 +343,7 @@ export default function LiveDemoTaamApri() {
       )}
 
       <div className="flex justify-end mt-8 opacity-30">
-        <span className="text-3xl">🥑</span>
+        <span className="text-3xl">🍊</span>
       </div>
     </div>
   );
