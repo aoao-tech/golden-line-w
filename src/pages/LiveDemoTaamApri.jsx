@@ -289,7 +289,7 @@ export default function LiveDemoTaamApri() {
 
           {/* Step 2b — Packing Station */}
           {step === "p2_injected" && (
-            <DemoCard icon={<ShoppingBag className="w-4 h-4" />} label="תחנת האריזה — מסך הארז" active={false} done={true}>
+            <DemoCard icon={<ShoppingBag className="w-4 h-4" />} label="תחנת האריזה — מסך האורז" active={false} done={true}>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 p-3 rounded-xl" style={{ backgroundColor: GREEN_LIGHT, border: `1px solid ${GREEN_BORDER}` }}>
                   <CheckCircle2 className="w-5 h-5 shrink-0" style={{ color: GREEN }} />
