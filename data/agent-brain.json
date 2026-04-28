@@ -1,0 +1,338 @@
+{
+  "metadata": {
+    "created_at": "2026-04-28T00:00:00Z",
+    "updated_at": "2026-04-28T00:00:00Z",
+    "version": "1.0",
+    "project": "Golden Line"
+  },
+  "creator_identity": {
+    "name": "Golden Line",
+    "niche": "Restaurant delivery operations — customer churn & LTV loss",
+    "tone": "recognition + curiosity (insightful, unexpected, not alarming)",
+    "differentiator": "Focus on the hidden LTV loss: customers who don't come back after 2 mistakes. Nobody else talks about this.",
+    "mission": "Help restaurant owners recognize and understand customer churn patterns driven by repeat service failures.",
+    "primary_focus": "Customer Retention & LTV Loss (86% churn after 2 mistakes)"
+  },
+  "icp": {
+    "primary_segments": [
+      "Restaurant owners with own delivery operation (not Wolt/Uber-dependent)",
+      "Suppliers/packers with own fulfillment (e.g., Vegetable Packaging House)",
+      "Online food businesses (produce, groceries) with own CRM + fulfillment"
+    ],
+    "secondary_segments": [
+      "Wolt/DoorDash restaurants with own fulfillment capability"
+    ],
+    "key_traits": [
+      "Owns order data end-to-end (CRM, KDS/POS, fulfillment)",
+      "Sees refund and churn problem but has no systematic fix",
+      "High order volume (100+ orders/day where pain is acute)",
+      "Open to operational improvements"
+    ],
+    "pain_points": [
+      "Losing repeat customers after 2nd bad experience (silent LTV loss)",
+      "No visibility of complaint history to kitchen/packer at preparation time",
+      "Refund abuse by customers with patterns",
+      "Information gap between CS team and fulfillment operations"
+    ],
+    "goals": [
+      "Reduce customer churn",
+      "Prevent false/repeat refunds",
+      "Systematic complaint handling at packing moment",
+      "Lower delivery-related losses"
+    ]
+  },
+  "content_pillars": [
+    {
+      "pillar_id": 1,
+      "name": "Customer Retention & LTV",
+      "description": "The hidden math behind losing a customer after their 2nd bad experience. Why restaurants hemorrhage LTV silently without knowing why.",
+      "example_angles": [
+        "Your best customer leaves after one mistake. Your second-best leaves after two. Most restaurants don't know the second one ordered again.",
+        "86% churn after 2 mistakes. But you only see refunds.",
+        "The real cost isn't the refund — it's that customer never comes back."
+      ],
+      "weight": 1.0
+    },
+    {
+      "pillar_id": 2,
+      "name": "Restaurant Operations & Kitchen Flow",
+      "description": "The information gap from CS to kitchen. That critical moment at packing where everything goes right or wrong.",
+      "example_angles": [
+        "Kitchen only sees a ticket number. CS sees the complaint history. Why are they disconnected?",
+        "The packer has one moment to save this order. Do they know this customer's last complaint?",
+        "Complaint info lives in the manager's head, not on the bon."
+      ],
+      "weight": 1.0
+    }
+  ],
+  "platforms": {
+    "research_sources": [
+      "YouTube",
+      "Reddit (r/restaurant, r/smallbusiness, r/foodservice, r/restaurateur)"
+    ],
+    "posting_platforms": [
+      {
+        "platform": "Instagram Reels",
+        "priority": 1,
+        "format": "15-30s faceless",
+        "cadence": "4-5x/week",
+        "description": "Primary platform - highest engagement for SMB audience"
+      },
+      {
+        "platform": "TikTok",
+        "priority": 2,
+        "format": "15-30s faceless",
+        "cadence": "4-5x/week",
+        "description": "Secondary platform - strong restaurant owner presence"
+      },
+      {
+        "platform": "YouTube Shorts",
+        "priority": 3,
+        "format": "60s max faceless",
+        "cadence": "3x/week",
+        "description": "Proof-of-product format (app demo + voiceover)"
+      },
+      {
+        "platform": "LinkedIn",
+        "priority": 4,
+        "format": "text + static visual",
+        "cadence": "2x/week",
+        "description": "Thought leadership, ops directors, franchise owners"
+      }
+    ],
+    "distribution_strategy": "Generate once, post across all 4 platforms with format adjustments"
+  },
+  "production_stack": {
+    "script_generation": "Claude (via /viral:script)",
+    "voiceover": "ElevenLabs free tier (paste script → download MP3)",
+    "video_creation": "CapCut (voiceover + template + captions + export)",
+    "posting": "CapCut direct publish + manual LinkedIn",
+    "production_time_per_week": "~30 min for 5-7 shorts (batched)"
+  },
+  "faceless_video_types": [
+    {
+      "type": "Text-on-screen only",
+      "use_case": "Quick hooks, alarming stats",
+      "production_time": "5 min",
+      "voiceover_needed": false
+    },
+    {
+      "type": "AI voiceover + app demo",
+      "use_case": "Product explanation, feature showcase",
+      "production_time": "15 min",
+      "voiceover_needed": true,
+      "visual_content": "Screen recording of Golden Line at golden-line.base44.app"
+    },
+    {
+      "type": "AI voiceover + stock footage",
+      "use_case": "Narrative storytelling, scenario illustration",
+      "production_time": "10 min",
+      "voiceover_needed": true,
+      "visual_content": "CapCut built-in stock library (kitchens, restaurants, order prep)"
+    }
+  ],
+  "content_quality_standards": {
+    "bar": "High quantity, NOT AI slop. Would a real restaurant owner stop scrolling for this?",
+    "red_flags": [
+      "Generic restaurant advice (10 ways to improve customer service)",
+      "Lists (5 ways, 7 tips — lazy format)",
+      "No specific problem or data",
+      "Obvious/already-known information"
+    ],
+    "green_flags": [
+      "One sharp, unexpected insight per video",
+      "Specific data or scenario",
+      "'Wait, I didn't know this' moment",
+      "Directly connects to ICP pain (LTV loss, kitchen visibility)"
+    ]
+  },
+  "funnel_strategy": {
+    "steps": [
+      "Awareness (platform discovery)",
+      "Comment engagement (validates pain, algo-friendly)",
+      "DM inquiry (high-intent signal)",
+      "Demo call (conversion)"
+    ],
+    "primary_cta": "Comment if this happened to you",
+    "cta_rationale": "Comments build social proof, are algo-friendly, and direct DMs are high-intent"
+  },
+  "platforms": {
+    "api_keys_configured": [
+      "youtube_data_v3"
+    ],
+    "api_keys_pending": [],
+    "api_keys_failed": [],
+    "posting_strategy": "Engagement-first: primary CTA = 'Comment if this happened to you'. Social proof builds algorithm boost. DMs happen naturally after engagement.",
+    "week_1_test": {
+      "cadence": "1 video per day",
+      "total_videos": 7,
+      "distribution": "All 4 platforms daily",
+      "production_tool": "ElevenLabs (voiceover) + CapCut (video)",
+      "success_threshold": "1+ comment per video = pain validated"
+    }
+  },
+  "learning": {
+    "hook_patterns": {
+      "direct_lead_with_data": {
+        "pattern": "Direct + Data-driven (Top performer: 6,037 avg views from 34,635 TikTok analysis)",
+        "example": "86% of customers leave after 2 mistakes. But you only see the refund. You miss the customer who just stopped ordering.",
+        "reading_level": "6th grade (2x more views than complex language)",
+        "performance_score": 1.0,
+        "is_primary": true
+      },
+      "pov_flip": {
+        "pattern": "Unexpected reframing (from refunds → churn)",
+        "example": "You refunded the order. But that customer never comes back.",
+        "performance_score": 0.95
+      },
+      "contrarian": {
+        "pattern": "Challenge common assumption",
+        "example": "Most restaurants focus on refunds. The real loss is churn.",
+        "performance_score": 0.85
+      },
+      "problem_solution": {
+        "pattern": "Acknowledge gap + hint at fix",
+        "example": "Customers leave silently. Most restaurants never notice.",
+        "performance_score": 0.80
+      }
+    },
+    "pillar_performance": {
+      "customer_retention_ltv": {
+        "videos_tested": 0,
+        "avg_comments": 0,
+        "avg_views": 0,
+        "weight": 1.0
+      },
+      "restaurant_ops_kitchen": {
+        "videos_tested": 0,
+        "avg_comments": 0,
+        "avg_views": 0,
+        "weight": 1.0
+      }
+    },
+    "platform_performance": {
+      "instagram": {
+        "videos_posted": 0,
+        "avg_comments": 0,
+        "avg_views": 0,
+        "conversion_rate": 0.0
+      },
+      "tiktok": {
+        "videos_posted": 0,
+        "avg_comments": 0,
+        "avg_views": 0,
+        "conversion_rate": 0.0
+      },
+      "youtube_shorts": {
+        "videos_posted": 0,
+        "avg_comments": 0,
+        "avg_views": 0,
+        "conversion_rate": 0.0
+      },
+      "linkedin": {
+        "videos_posted": 0,
+        "avg_comments": 0,
+        "avg_views": 0,
+        "conversion_rate": 0.0
+      }
+    },
+    "topic_performance": {},
+    "evolution_log": [
+      {
+        "date": "2026-04-28",
+        "change": "Initial brain created from Golden Line strategy document",
+        "reason": "Setup completion",
+        "updated_weights": null
+      }
+    ]
+  },
+  "execution_roadmap": {
+    "week_0": {
+      "status": "in_progress",
+      "tasks": [
+        "Get YouTube Data API key ✓",
+        "Create .env with keys ✓",
+        "Run /viral:setup ✓",
+        "Run /viral:onboard ✓"
+      ]
+    },
+    "week_1": {
+      "status": "pending",
+      "tasks": [
+        "Run /viral:discover --keywords (churn, LTV, repeat customer, customer retention)",
+        "Run /viral:angle on top 3-5 topics",
+        "Run /viral:script (generate 7 scripts)",
+        "Produce 1 video/day (7 total) in CapCut + ElevenLabs",
+        "Post across all 4 platforms (daily rotation)"
+      ],
+      "success_metric": "1+ comment per video = validates pain recognition"
+    },
+    "week_2": {
+      "status": "pending",
+      "tasks": [
+        "Analyze Week 1 results (which topics/hooks got engagement?)",
+        "Decide: continue solo OR hire video producer",
+        "If solo: scale to sustainable cadence",
+        "If hire: brief producer on brand voice + hook patterns"
+      ]
+    },
+    "week_3_4": {
+      "status": "pending",
+      "tasks": [
+        "Run /viral:discover (new topics)",
+        "Angle + Script (repeat)",
+        "Produce and post batch 2",
+        "Start collecting engagement metrics"
+      ]
+    },
+    "week_5_6": {
+      "status": "pending",
+      "tasks": [
+        "Continuing content loop",
+        "After 4 weeks total: Run /viral:analyze",
+        "Run /viral:update-brain",
+        "Observe which pillars/angles drove most comments"
+      ]
+    }
+  },
+  "success_metrics": {
+    "short_term": {
+      "timeline": "Week 1-2",
+      "targets": [
+        "5-7 scripts generated",
+        "All scripts posted (Instagram + TikTok + YouTube + LinkedIn)",
+        "Zero editing skills required (CapCut templates)"
+      ]
+    },
+    "medium_term": {
+      "timeline": "Week 3-6",
+      "targets": [
+        "First comments from restaurateurs validating pain",
+        "Identify resonating pillar (LTV math or ops gap)",
+        "Comments > 50 on best-performing videos"
+      ]
+    },
+    "long_term": {
+      "timeline": "Month 2+",
+      "targets": [
+        "First DM inquiries about Golden Line",
+        "Direct pipeline to demo calls",
+        "System learning: topics/angles/hooks ranked by engagement",
+        "1-2 demo calls booked from content",
+        "Engagement rate stable or improving"
+      ]
+    }
+  },
+  "notes": {
+    "key_insights": [
+      "Faceless = no phone camera needed. All tools are free.",
+      "High quantity strategy: 5-7 shorts/week > 1 perfect short/month",
+      "Comments = signal. Don't obsess over views.",
+      "System learns fast. After 4 weeks, /viral:update-brain becomes powerful.",
+      "No cold outreach. Content pulls inbound traffic.",
+      "Golden Line demo is live at golden-line.base44.app for proof"
+    ],
+    "production_workflow": "Batch production: spend 45 min producing all 5-7 scripts on one day, post over week on rotation",
+    "content_distribution": "Once per day for Instagram + TikTok, 3x/week for YouTube Shorts, 2x/week for LinkedIn"
+  }
+}
