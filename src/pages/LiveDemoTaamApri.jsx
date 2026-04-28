@@ -265,6 +265,7 @@ export default function LiveDemoTaamApri() {
               <div className="flex flex-wrap items-center gap-2 mb-3 text-xs">
                 <span className="font-mono px-2 py-1 rounded-lg bg-slate-100 text-slate-600">הזמנה: {DEMO.order.id}</span>
                 <span className="font-medium px-2 py-1 rounded-lg" style={{ backgroundColor: GREEN_LIGHT, border: `1px solid ${GREEN_BORDER}`, color: GREEN_DARK }}>👤 {DEMO.customer.name}</span>
+                <span className="font-mono px-2 py-1 rounded-lg bg-orange-100 text-orange-700 border border-orange-200">{DEMO.customer.id}</span>
               </div>
               <div className="space-y-1.5 mb-3">
                 {DEMO.order.items.map((item, i) => (
