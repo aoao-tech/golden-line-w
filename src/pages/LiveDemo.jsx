@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, RotateCcw, Zap, ChefHat, MessageSquare, Brain, CheckCircle2, Database, ShoppingCart, ArrowRight } from "lucide-react";
@@ -33,10 +33,8 @@ const DEMO_SCENARIO = {
 
 export default function LiveDemo() {
   const [step, setStep] = useState("p1_ticket");
-  const [displayedText, setDisplayedText] = useState(DEMO_SCENARIO.complaint);
   const [analyzeProgress, setAnalyzeProgress] = useState(0);
   const [savedDebtId, setSavedDebtId] = useState(null);
-  const intervalRef = useRef(null);
 
   const PHASE1_STEPS = ["p1_ticket", "p1_analyzing", "p1_stored"];
   const PHASE2_STEPS = ["p2_order", "p2_triggering", "p2_injected"];
@@ -47,9 +45,7 @@ export default function LiveDemo() {
   const phase2Done = step === "p2_injected";
 
   const reset = () => {
-    clearInterval(intervalRef.current);
     setStep("p1_ticket");
-    setDisplayedText(DEMO_SCENARIO.complaint);
     setAnalyzeProgress(0);
     setSavedDebtId(null);
   };
@@ -67,17 +63,21 @@ export default function LiveDemo() {
     clearInterval(prog);
     setAnalyzeProgress(100);
 
-    // Save to DB
+    // Save to DB — best effort with a hard timeout so the demo never stalls
     try {
-      const record = await base44.entities.OperationalDebts.create({
-        customer_id: DEMO_SCENARIO.customer_id,
-        restaurant_id: DEMO_SCENARIO.restaurant_id,
-        ...DEMO_SCENARIO.analysis,
-        injected_count: 0,
-        source_ticket_id: DEMO_SCENARIO.ticket_id,
-      });
+      const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 4000));
+      const record = await Promise.race([
+        base44.entities.OperationalDebts.create({
+          customer_id: DEMO_SCENARIO.customer_id,
+          restaurant_id: DEMO_SCENARIO.restaurant_id,
+          ...DEMO_SCENARIO.analysis,
+          injected_count: 0,
+          source_ticket_id: DEMO_SCENARIO.ticket_id,
+        }),
+        timeout,
+      ]);
       setSavedDebtId(record.id);
-    } catch (e) { /* show anyway */ }
+    } catch { /* demo continues either way */ }
 
     setStep("p1_stored");
   };
@@ -141,7 +141,7 @@ export default function LiveDemo() {
               <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 font-normal text-[10px]">Closed</Badge>
             </div>
             <div className="bg-white rounded-lg border border-slate-200 p-3 text-sm text-slate-700 leading-relaxed min-h-[80px]">
-              {displayedText}
+              {DEMO_SCENARIO.complaint}
             </div>
           </DemoCard>
 
@@ -314,6 +314,11 @@ export default function LiveDemo() {
                 <div className="text-xs text-slate-400 flex items-center gap-1.5">
                   <CheckCircle2 className="w-3 h-3 text-emerald-500" />
                   Same mistake will not happen again on this order.
+                </div>
+                <div className="pt-2 text-center">
+                  <Button variant="outline" size="sm" onClick={reset}>
+                    <RotateCcw className="w-3.5 h-3.5 mr-1.5" /> Replay demo
+                  </Button>
                 </div>
               </div>
             </DemoCard>

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Play, RotateCcw, MessageSquare, Brain, CheckCircle2, Database, ShoppingCart, Utensils } from "lucide-react";
+import { RotateCcw, MessageSquare, Brain, CheckCircle2, Database, ShoppingCart, Utensils } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 
 const DEMO = {
