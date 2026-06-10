@@ -1,0 +1,57 @@
+{
+  "id": "ab_test_day1_001",
+  "topic": "86% customer churn after 2 mistakes",
+  "core_content": "86% of customers who experience 2 complaints stop ordering. But restaurants focus on refunds, not retention. The real loss is the customer who never comes back.",
+  "day": "Day 1 - Video 1",
+  "hook_variant": "A - Contrarian Open",
+  "hook_proven_type": "Contrarian Open (6,037 avg views)",
+  "voiceover_script": "Everyone says focus on refunds. Wrong. 86% of customers who complain twice just disappear. That's silent LTV loss. Nobody talks about it.",
+  "duration": "13s",
+  "visual_cue": "Black background, white bold text: '86% LEAVE AFTER 2 MISTAKES'",
+  "platform": "TikTok",
+  "cta": "Comment if this happened to you",
+  "post_time": "Day 1 - Morning"
+}
+{
+  "id": "ab_test_day1_002",
+  "topic": "86% customer churn after 2 mistakes",
+  "core_content": "86% of customers who experience 2 complaints stop ordering. But restaurants focus on refunds, not retention. The real loss is the customer who never comes back.",
+  "day": "Day 1 - Video 2",
+  "hook_variant": "B - Specific Number + Outcome",
+  "hook_proven_type": "Specific Number + Outcome (6,037 avg views)",
+  "voiceover_script": "86% of customers leave after 2 mistakes. But here's what kills you: you don't see it happen. They just stop ordering. No complaint, no drama. Just gone. That's millions in silent LTV loss.",
+  "duration": "13s",
+  "visual_cue": "Order history graph declining. Customer disappearance visualization.",
+  "platform": "TikTok",
+  "cta": "Comment if this happened to you",
+  "post_time": "Day 1 - Midday"
+}
+{
+  "id": "ab_test_day1_003",
+  "topic": "86% customer churn after 2 mistakes",
+  "core_content": "86% of customers who experience 2 complaints stop ordering. But restaurants focus on refunds, not retention. The real loss is the customer who never comes back.",
+  "day": "Day 1 - Video 3",
+  "hook_variant": "C - Expert Explainer Setup",
+  "hook_proven_type": "Expert Explainer Setup (5,200+ avg views)",
+  "voiceover_script": "I've managed restaurant teams for years. Here's what nobody tells you: that customer who complained twice? They're not coming back. 86% never order again. And you don't even know they're gone.",
+  "duration": "13s",
+  "visual_cue": "Kitchen prep sequence. Customer notification. Order decline animation.",
+  "platform": "TikTok",
+  "cta": "Comment if this happened to you",
+  "post_time": "Day 1 - Evening"
+}
+{
+  "id": "ab_test_winner",
+  "topic": "86% customer churn after 2 mistakes",
+  "core_content": "86% of customers who experience 2 complaints stop ordering. But restaurants focus on refunds, not retention. The real loss is the customer who never comes back.",
+  "phase": "Days 2-7: Scale Winner Hook",
+  "hook_variant": "WINNER (to be determined after Day 1)",
+  "hook_proven_type": "To be measured - whichever hook gets most comments",
+  "winning_hook_a_comments": 0,
+  "winning_hook_b_comments": 0,
+  "winning_hook_c_comments": 0,
+  "platform": "Instagram Reels, YouTube Shorts, LinkedIn",
+  "cta": "Comment if this happened to you",
+  "scaling_plan": "Days 2-7: Post winning hook to Instagram (Day 2), YouTube Shorts (Day 3), LinkedIn (Day 4), repeat/rotate remaining days",
+  "created_at": "2026-04-29"
+}

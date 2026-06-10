@@ -1,0 +1,80 @@
+{
+  "id": "script_20260429_001",
+  "hook_type": "Contrarian Open",
+  "variant": "A",
+  "source": "OpusClip 34,635 TikTok analysis - 6,037 avg views",
+  "platform": "shortform",
+  "voiceover_script": "Everyone focuses on refunds. Wrong problem. The real cost isn't the refund. It's the customer who stops ordering. One complaint? They give you another chance. Two complaints? 86% never come back. You can't fix this with refunds. Here's what actually happens: The packer sees a new order. They don't know this customer already complained. They make the same mistake again. Customer's gone. You lost them permanently. How many repeat customers has this cost you? Comment if you've seen this pattern.",
+  "duration_estimate": "35s",
+  "visual_cue": "Black background + white text overlay. Key phrases highlighted (hook, 86%, questions).",
+  "created_at": "2026-04-29T20:45:00Z",
+  "status": "ready"
+}
+{
+  "id": "script_20260429_002",
+  "hook_type": "Expert Authority",
+  "variant": "C",
+  "source": "OpusClip 34,635 TikTok analysis - 5,200+ avg views",
+  "platform": "shortform",
+  "voiceover_script": "I've managed restaurant teams for years. I've watched this pattern happen over and over. A customer complains. Missing items. Wrong order. Whatever. We handle it. Issue a refund. Problem solved. Except it's not. Next week, they order again. The packer has no idea they complained last time. Same mistake happens. Second complaint. Now they're done. Not angry. Not demanding anything. Just gone. They order elsewhere now. You don't know why you lost them. But I do. After the second mistake, your kitchen never saw the first complaint. The information gap between your CS team and your packing line costs you customers. Permanently. I see this happen in every restaurant operation. Has it happened to yours? Comment if you recognize this.",
+  "duration_estimate": "40s",
+  "visual_cue": "Black background + white text overlay. Story-driven pacing (complaint → order → repeat → loss).",
+  "created_at": "2026-04-29T20:45:00Z",
+  "status": "ready"
+}
+{
+  "id": "script_20260429_003",
+  "hook_type": "Specific Number (Data-Driven)",
+  "variant": "B",
+  "source": "OpusClip 34,635 TikTok analysis - 6,037 avg views",
+  "platform": "shortform",
+  "voiceover_script": "86 percent. Not 80. Not 90. Eighty-six. That's how many customers stop ordering after complaining twice. Think about your last 100 orders. How many came from returning customers who've complained before? Probably more than you realize. Here's why: The packer doesn't know this customer already complained. They repeat the same mistake. Customer leaves for good. One complaint? They forgive you. Two complaints? 86% never come back. This isn't a refund problem. This is permanent customer loss. Silent. Invisible. Expensive. Why are your repeat customers disappearing? Comment if this sounds familiar.",
+  "duration_estimate": "38s",
+  "visual_cue": "Black background + white text overlay. Emphasize 86% with larger/colored text. Analytical pacing.",
+  "created_at": "2026-04-29T20:45:00Z",
+  "status": "ready"
+}
+{
+  "id": "script_20260429_004",
+  "hook_type": "Specific Number + Contrarian",
+  "source": "OpusClip 34,635 TikTok analysis - 6,037 avg views",
+  "platform": "shortform",
+  "voiceover_script": "86% of customers leave after 2 mistakes. But here's what kills you: you don't see it happen. They just stop ordering. No complaint, no drama. Just gone. That's millions in silent LTV loss.",
+  "duration_estimate": "13s",
+  "visual_cue": "Customer analytics. Order history graph declining. Empty order board.",
+  "created_at": "2026-04-29T20:45:00Z",
+  "status": "ready"
+}
+{
+  "id": "script_20260429_005",
+  "hook_type": "Product/Outcome Showcase (Adapted)",
+  "source": "OpusClip 34,635 TikTok analysis - 6,037 avg views",
+  "platform": "shortform",
+  "voiceover_script": "The packer has one moment to save this order. But they don't know the customer complained before. So they make the same mistake twice. That's when you lose them forever. Information gap kills retention.",
+  "duration_estimate": "13s",
+  "visual_cue": "Packing station closeup. Kitchen workflow. Complaint documentation.",
+  "created_at": "2026-04-29T20:45:00Z",
+  "status": "ready"
+}
+{
+  "id": "script_20260429_006",
+  "hook_type": "Expert Explainer + Contrarian",
+  "source": "OpusClip 34,635 TikTok analysis - 5,200+ avg views",
+  "platform": "shortform",
+  "voiceover_script": "I've studied restaurant churn patterns. Everyone focuses on refund fraud. That's not the problem. The real pattern is customers who disappear silently after two bad experiences. That's where your revenue goes.",
+  "duration_estimate": "13s",
+  "visual_cue": "Order history analysis. Refund comparison chart. Silent churn visualization.",
+  "created_at": "2026-04-29T20:45:00Z",
+  "status": "ready"
+}
+{
+  "id": "script_20260429_007",
+  "hook_type": "Specific Number + Outcome",
+  "source": "OpusClip 34,635 TikTok analysis - 6,037 avg views",
+  "platform": "shortform",
+  "voiceover_script": "One customer ordering twice a week is thousands in annual revenue. Lose them once, maybe you get another chance. Lose them twice? They're done. 86% don't return. That's your LTV walking out the door.",
+  "duration_estimate": "13s",
+  "visual_cue": "Revenue calculation graphic. Customer lifetime value breakdown. LTV loss animation.",
+  "created_at": "2026-04-29T20:45:00Z",
+  "status": "ready"
+}

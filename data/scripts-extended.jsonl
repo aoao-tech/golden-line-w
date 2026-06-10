@@ -1,0 +1,90 @@
+{
+  "id": "script_extended_001",
+  "hook_type": "Specific Number + Outcome",
+  "source": "OpusClip proven - 6,037 avg views",
+  "angle": "Silent churn economics",
+  "voiceover_script": "47 customers quietly stopped ordering last month. You didn't notice. You were too busy processing refunds. But those 47 customers? That's $12,000 in annual LTV you just lost. And you don't even know their names.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_002",
+  "hook_type": "Contrarian Open",
+  "source": "OpusClip proven - 6,037 avg views",
+  "angle": "Refund vs churn misconception",
+  "voiceover_script": "Everyone thinks refund fraud is your biggest problem. It's not even close. Silent churn costs 10x more. A customer who complains twice and disappears is worth more than 100 refund disputes. But restaurants never measure it.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_003",
+  "hook_type": "Expert Explainer Setup",
+  "source": "OpusClip proven - 5,200+ avg views",
+  "angle": "Kitchen information gap",
+  "voiceover_script": "I've worked with 50+ restaurants. The pattern is always the same. Kitchen doesn't know customer history. Packer has zero context. Same mistake happens twice. Customer leaves for good. That's the gap everyone ignores.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_004",
+  "hook_type": "Imperative Command",
+  "source": "OpusClip proven - 4,800+ avg views",
+  "angle": "Repeat customer tracking",
+  "voiceover_script": "Stop guessing which customers are repeat complainers. You probably don't even track it. Meanwhile, the same people are ordering again, getting the same mistake, and leaving forever. That's preventable loss.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_005",
+  "hook_type": "Specific Number + Contrarian",
+  "source": "OpusClip proven - 6,037 avg views",
+  "angle": "Second-order churn",
+  "voiceover_script": "2 mistakes. That's all it takes. 86% don't come back. But most restaurants don't even track first mistakes. They just see the refund. They never connect it to the person who stops ordering.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_006",
+  "hook_type": "Product/Outcome Showcase",
+  "source": "OpusClip proven - 6,037 avg views",
+  "angle": "Packing moment prevention",
+  "voiceover_script": "One notification at the packing station. That's all it takes to prevent the refund. But your packer doesn't see it. They don't know this customer complained before. So they pack it the same wrong way. Again.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_007",
+  "hook_type": "Expert Explainer + Specific Number",
+  "source": "OpusClip proven - 5,200+ avg views",
+  "angle": "LTV vs refund cost",
+  "voiceover_script": "I've calculated this with hundreds of restaurants. A $20 refund stings. But losing a customer worth $3,000 per year? That destroys your unit economics. Yet restaurants obsess over the refund and ignore the churn.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_008",
+  "hook_type": "Contrarian Open",
+  "source": "OpusClip proven - 6,037 avg views",
+  "angle": "CS team disconnect",
+  "voiceover_script": "Everyone blames the kitchen for mistakes. Wrong angle. The real problem is your CS team and kitchen never talk. CS knows the customer is a repeat complainer. Kitchen doesn't. Information doesn't flow. That's the design flaw.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_009",
+  "hook_type": "Specific Number",
+  "source": "OpusClip proven - 6,037 avg views",
+  "angle": "Hidden revenue loss",
+  "voiceover_script": "3 customers per week silently churn from your operation. You don't see it. No refund request. No complaint. Just gone. Over a year, that's 156 customers. That's six figures in lost revenue you never knew existed.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}
+{
+  "id": "script_extended_010",
+  "hook_type": "Imperative Command + Contrarian",
+  "source": "OpusClip proven - 4,800+ avg views",
+  "angle": "Stop reactive management",
+  "voiceover_script": "Stop managing by refund. Start managing by retention. One tells you what you lost. The other tells you who's about to leave. Restaurants do the first and ignore the second. That's backwards.",
+  "duration": "13s",
+  "created_at": "2026-04-29"
+}

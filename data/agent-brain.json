@@ -111,14 +111,18 @@
   },
   "faceless_video_types": [
     {
-      "type": "Text-on-screen only",
-      "use_case": "Quick hooks, alarming stats",
-      "production_time": "5 min",
-      "voiceover_needed": false
+      "type": "AI voiceover + black background + text overlay",
+      "use_case": "Problem-solution narratives, customer churn angles",
+      "duration": "30-45 seconds",
+      "production_time": "8 min per video",
+      "voiceover_needed": true,
+      "visual_content": "Black background + animated text (CapCut templates)",
+      "week_1_format": "Primary format for Day 1-7 A/B testing (all 3 variants)"
     },
     {
       "type": "AI voiceover + app demo",
       "use_case": "Product explanation, feature showcase",
+      "duration": "30-60 seconds",
       "production_time": "15 min",
       "voiceover_needed": true,
       "visual_content": "Screen recording of Golden Line at golden-line.base44.app"
@@ -126,6 +130,7 @@
     {
       "type": "AI voiceover + stock footage",
       "use_case": "Narrative storytelling, scenario illustration",
+      "duration": "30-60 seconds",
       "production_time": "10 min",
       "voiceover_needed": true,
       "visual_content": "CapCut built-in stock library (kitchens, restaurants, order prep)"
@@ -164,11 +169,28 @@
     "api_keys_failed": [],
     "posting_strategy": "Engagement-first: primary CTA = 'Comment if this happened to you'. Social proof builds algorithm boost. DMs happen naturally after engagement.",
     "week_1_test": {
-      "cadence": "1 video per day",
-      "total_videos": 7,
-      "distribution": "All 4 platforms daily",
-      "production_tool": "ElevenLabs (voiceover) + CapCut (video)",
-      "success_threshold": "1+ comment per video = pain validated"
+      "cadence": "1 topic per day (3 hook variants per topic, same day)",
+      "total_videos": "21 (3 hooks × 7 topics)",
+      "video_format": "30-45 sec faceless (black bg + text overlay + voiceover)",
+      "ab_testing_strategy": "Hook variation testing on TikTok (all 3 variants posted same day)",
+      "testing_process": [
+        "1. Write script for topic (e.g., 86% churn)",
+        "2. Generate 3 DIFFERENT HOOKS (same pain message, different angles: Contrarian / Specific# / Expert)",
+        "3. Record 3 voiceovers (CapCut Voice Studio, ~2 min)",
+        "4. Create 3 CapCut videos (black + text, ~6 min per video)",
+        "5. Post all 3 variants to TikTok (morning, midday, evening — same day)",
+        "6. Measure after 24h: which hook gets most comments?",
+        "7. Winner: scale to Instagram, YouTube Shorts, LinkedIn (Days 2-7)"
+      ],
+      "hook_variants": [
+        "Variant A: Contrarian Open (challenges assumption)",
+        "Variant B: Specific Number (data-driven, odd numbers like 86%)",
+        "Variant C: Expert Authority (trust-building, pattern recognition)"
+      ],
+      "distribution": "Day 1: TikTok hook testing (3 variants) → Day 2-7: Winning hook to all 4 platforms",
+      "production_tool": "CapCut Voice Studio (voiceover) + CapCut (video assembly)",
+      "production_time_day1": "~30 min total (6 min voiceovers + 18 min video creation)",
+      "success_threshold": "10+ comments per video = strong pain validation. Winning hook: 3x+ more comments than runner-up."
     }
   },
   "learning": {

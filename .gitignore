@@ -2,6 +2,12 @@
 .env
 .env.*
 
+# Local machine settings + runtime data (never commit)
+.claude/settings.local.json
+data/recon/
+__pycache__/
+*.pyc
+
 # Logs
 /logs
 *.log
