@@ -87,11 +87,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
-      {/* NAV */}
-      <header
-        className="sticky top-0 z-50 border-b border-white/10"
-        style={{ backgroundColor: "rgba(13,27,46,0.92)", backdropFilter: "blur(8px)" }}
-      >
+      {/* NAV — scrolls away with the page */}
+      <header className="absolute top-0 left-0 right-0 z-50 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-md bg-amber-500 flex items-center justify-center font-black text-slate-900 text-sm">
@@ -120,7 +117,7 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section className="px-6 pt-20 pb-24 text-center" style={{ backgroundColor: NAVY }}>
+      <section className="px-6 pt-32 pb-24 text-center" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 text-xs font-medium text-amber-300 bg-amber-400/10 border border-amber-400/20 rounded-full px-4 py-1.5 mb-6">
             <ShieldCheck className="w-3.5 h-3.5" />
@@ -292,18 +289,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="px-6 py-8 bg-slate-950 text-center">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <div className="w-5 h-5 rounded bg-amber-500 flex items-center justify-center font-black text-slate-900 text-[10px]">
-            G
-          </div>
-          <span className="text-white/80 text-sm font-medium">Golden Line</span>
-        </div>
-        <p className="text-white/40 text-xs">
-          Prevention, not compensation. © {new Date().getFullYear()} Golden Line.
-        </p>
-      </footer>
     </div>
   );
 }
